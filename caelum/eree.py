@@ -8,6 +8,7 @@ import os
 import csv
 import zipfile
 import tempfile
+import datetime
 try:
     from urllib.request import urlopen
 except ImportError:
@@ -23,6 +24,18 @@ except OSError:
         os.mkdir(WEATHER_DATA_PATH)
     except IOError:
         pass
+def _muck_w_date(record):
+    """muck with the date because EPW starts counting from 1 and goes to 24"""
+    d = datetime.datetime(int(record['Year']), int(record['Month']), \
+            int(record['Day']), int(record['Hour'])%24, \
+            int(record['Minute'])%60)
+    h_off = int(record['Hour']) //60 
+    if h_off > 0:
+        d += datetime.timedelta(hours=h_off )
+    d_off =  int(record['Hour'])//24
+    if d_off > 0:
+        d += datetime.timedelta(days=d_off)
+    return d
 
 def download(url):
     """download TMY3 file"""
@@ -80,7 +93,7 @@ class EPWdata(object):
                 "Present Weather", "Pw codes", "Pwat (cm)", "AOD (unitless)", \
                 "Snow Depth (cm)", "Days since snowfall"]
         dummy = ""
-        for _ in range(7):
+        for _ in range(8):
             dummy += self.csvfile.readline()
         self.epw_data = csv.DictReader(self.csvfile, fieldnames=fieldnames)
 
@@ -89,7 +102,9 @@ class EPWdata(object):
 
     def next(self):
         """generator handle"""
-        return self.epw_data.next()
+        record = self.epw_data.next()
+        record['utc_datetime'] = _muck_w_date(record)
+        return record
 
     def __del__(self):
         self.csvfile.close()
@@ -97,4 +112,6 @@ class EPWdata(object):
 if __name__ == '__main__':
     SCODE = '418830'
     for trecord in EPWdata(SCODE):
-        print(trecord)
+        print(trecord['utc_datetime']),
+        print(trecord['DNI (W/m^2)']),
+        print(trecord['GHI (W/m^2)'])
