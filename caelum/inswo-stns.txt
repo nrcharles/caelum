@@ -1,0 +1,1492 @@
+NUMBER NAME & STATE/COUNTRY                                LAT   LON     ELEV (meters)
+
+010250 TROMSO                                          NO  6941N 01855E    10
+011520 BODO                                            NO  6716N 01422E    13   
+012050 SVINOY (LGT-H)                                  NO  6220N 00516E    41   
+012710 TRONDHEIM                                       NO  6328N 01056E    17   
+013110 BERGEN                                          NO  6018N 00513E    50   
+013840 OSLO/GARDERMOEN                                 NO  6012N 01105E   204   
+014030 UTSIRA                                          NO  5918N 00453E    56   
+014150 STAVANGER                                       NO  5853N 00538E     9   
+014880 OSLO/FORNEBU                                    NO  5954N 01037E    17   
+020440 KIRUNA                                          SN  6749N 02020E   452   
+022260 OSTERSUND/FROSO                                 SN  6311N 01430E   370   
+023660 SUNDSVALL                                       SN  6232N 01727E    10   
+023760 SODERHAMN                                       SN  6116N 01706E    36   
+024000 OSTMARK                                         SN  6021N 01239E   310   
+024180 KARLSTAD                                        SN  5922N 01328E    55   
+024580 UPPSALA                                         SN  5953N 01736E    41   
+024600 STOCKHOLM: ARLANDA                              SN  5939N 01757E    61   
+024640 STOCKHOLM: BROMMA                               SN  5921N 01757E    11   
+025120 GOTEBORG: SAVE                                  SN  5747N 01153E    53   
+025260 GOTEBORG: LANDVETTER                            SN  5740N 01218E   169   
+025440 KARLSBORG                                       SN  5831N 01432E   102   
+025500 JONKOPING                                       SN  5746N 01405E   232   
+025900 VISBY                                           SN  5740N 01821E    47   
+026360 MALMO                                           SN  5533N 01322E   106   
+026660 UNGSKAR                                         SN  5602N 01548E     3   
+026720 KALMAR                                          SN  5644N 01618E    16   
+028440 PELLO                                           FI  6648N 02400E    84   
+028790 SUOMUSSALMI                                     FI  6454N 02901E   224   
+029130 KAUHAVA                                         FI  6306N 02302E    44   
+029170 KUOPIO                                          FI  6301N 02748E   102   
+029350 JYVASKYLA                                       FI  6224N 02541E   145   
+029440 TAMPERE                                         FI  6125N 02335E   112   
+029520 PORI                                            FI  6128N 02148E    17   
+029650 LAHTI                                           FI  6058N 02538E    84   
+029720 TURKU                                           FI  6031N 02216E    59   
+029740 HELSINKI                                        FI  6019N 02458E    56   
+030050 LERWICK                                         UK  6008N 00111W    84   
+030170 KIRKWALL                                        UK  5857N 00254W    21   
+030260 STORNOWAY                                       UK  5813N 00619W    13   
+030630 AVIEMORE                                        UK  5712N 00350W   220   
+030910 ABERDEEN/DYCE                                   UK  5712N 00213W    65   
+031140 OBAN                                            UK  5625N 00528W     4   
+031400 GLASGOW                                         UK  5552N 00426W     8   
+031600 EDINBURGH                                       UK  5557N 00321W    41   
+031710 LEUCHARS                                        UK  5623N 00252W    12   
+032220 CARLISLE                                        UK  5456N 00257W    26   
+032620 TYNEMOUTH                                       UK  5501N 00125W    30   
+033020 VALLEY                                          UK  5315N 00432W    11   
+033220 AUGHTON                                         UK  5333N 00255W    56   
+033340 MANCHESTER                                      UK  5321N 00216W    78   
+033540 NOTTINGHAM                                      UK  5300N 00115W   117   
+033600 FINNINGLEY                                      UK  5329N 00100W    17   
+034960 HEMSBY                                          UK  5241N 00141E    14   
+035020 ABERPORTH                                       UK  5208N 00434W   134   
+035340 BIRMINGHAM                                      UK  5227N 00144W    99   
+035660 WYTON RAF                                       UK  5221N 00007W    41   
+036830 STANSTED AIRPORT                                UK  5153N 00014E   106   
+037150 CARDIFF                                         UK  5124N 00321W    67   
+037260 BRISTOL                                         UK  5128N 00236W    11   
+037400 LYNEHAM                                         UK  5130N 00159W   156   
+037720 LONDON: HEATHROW                                UK  5129N 00027W    24   
+037760 LONDON: GATWICK ARPT                            UK  5109N 00011W    62   
+038080 CAMBORNE                                        UK  5022N 00532W    88   
+038270 PLYMOUTH                                        UK  5021N 00407W    27   
+038390 EXETER                                          UK  5044N 00325W    30   
+038620 BOURNEMOUTH                                     UK  5047N 00150W    11   
+038840 HERSTMONCEUX                                    UK  5052N 00020E    17   
+038950 JERSEY/CHANNEL ISLANDS                          UK  4913N 00212W    84   
+039170 BELFAST                                         UK  5439N 00613W    81   
+039530 VALENTIA OBSERVATORY                            IE  5156N 01015W    14   
+039550 CORK                                            IE  5151N 00829W   162   
+039570 ROSSLARE                                        IE  5215N 00620W    25   
+039600 KILKENNY                                        IE  5240N 00716W    64   
+039620 SHANNON                                         IE  5242N 00855W    20   
+039650 BIRR                                            IE  5305N 00753W    72   
+039690 DUBLIN                                          IE  5326N 00615W    85   
+039700 CLAREMORRIS                                     IE  5343N 00859W    69   
+039710 MULLINGAR                                       IE  5332N 00722W   104   
+039740 CLONES                                          IE  5411N 00714W    89   
+039760 BELMULLET                                       IE  5414N 01000W    10   
+039800 MALIN                                           IE  5522N 00720W    25   
+040180 KEFLAVIK                                        IL  6358N 02236W    54   
+040300 REYKJAVIK                                       IL  6408N 02154W    61   
+040630 AKUREYRI                                        IL  6541N 01805W    27   
+040770 RAUFARHOFN                                      IL  6627N 01557W    10   
+042020 DUNDAS: THULE AB                                GL  7632N 06830W    59   
+042310 KANGERLUSSUAQ                                   GL  6700N 05048W    53   
+042500 GODTHAB                                         GL  6410N 05145W    70   
+042700 NARSARSUAQ                                      GL  6111N 04525W    26   
+060110 TORSHAVN                                        FA  6201N 00646W    39   
+060300 ALBORG                                          DN  5706N 00952E     3   
+060410 SKAGEN                                          DN  5746N 01039E     7   
+060700 TIRSTRUP                                        DN  5618N 01037E    25   
+061200 ODENSE                                          DN  5528N 01020E    17   
+061790 MON ISLAND                                      DN  5457N 01233E    15   
+061800 COPENHAGEN                                      DN  5538N 01240E     5   
+061930 HAMMERODDE                                      DN  5518N 01447E    11   
+062400 AMSTERDAM                                       NL  5218N 00446E    -2   
+062600 DE BILT                                         NL  5206N 00511E     4   
+062700 LEEUWARDEN                                      NL  5313N 00545E     2   
+062800 GRONINGEN                                       NL  5308N 00635E     4   
+063440 ROTTERDAM                                       NL  5157N 00427E    -4   
+063500 GILZE/RIJEN                                     NL  5134N 00456E    13   
+063700 EINDHOVEN                                       NL  5127N 00525E    22   
+063800 BEEK                                            NL  5055N 00547E   116   
+064000 KOKSIJDE                                        BX  5105N 00239E     9   
+064070 OOSTENDE                                        BX  5112N 00252E     5   
+064490 CHARLEROI                                       BX  5028N 00427E   192   
+064500 ANTWERP                                         BX  5112N 00428E    14   
+064510 BRUSSELS                                        BX  5054N 00432E    58   
+064560 FLORENNES                                       BX  5014N 00439E   299   
+064760 SAINT HUBERT                                    BX  5002N 00524E   557   
+065900 LUXEMBOURG                                      BX  4937N 00613E   379   
+066100 PAYERNE                                         SW  4649N 00657E   491   
+066120 LA CHAUX-DE-FONDS                               SW  4705N 00648E  1019   
+066600 ZURICH                                          SW  4723N 00834E   569   
+066800 SAENTIS (AUT)                                   SW  4715N 00921E  2500   
+067000 GENEVA                                          SW  4615N 00608E   416   
+067300 JUNGFRAU MOUNTAIN                               SW  4633N 00759E  3576   
+067340 INTERLAKEN                                      SW  4640N 00753E   580   
+067620 LOCARNO                                         SW  4610N 00853E   198   
+067700 LUGANO                                          SW  4600N 00858E   276   
+067830 SAN BERNARDINO                                  SW  4628N 00911E  1638   
+069900 VADUZ                                           LT  4708N 00932E   463   
+070610 ST.-QUENTIN                                     FR  4949N 00312E   101   
+071100 BREST                                           FR  4827N 00425W   103   
+071430 CHARTRES                                        FR  4828N 00131E   156   
+071490 PARIS: ORLY                                     FR  4844N 00224E    96   
+071570 PARIS: CHARLES DE GAULLE                        FR  4901N 00232E   109   
+071800 NANCY                                           FR  4841N 00613E   217   
+071900 STRASBOURG                                      FR  4833N 00738E   154   
+072220 NANTES                                          FR  4710N 00136W    27   
+072490 ORLEANS                                         FR  4759N 00145E   125   
+072800 DIJON                                           FR  4716N 00505E   227   
+074600 CLERMONT-FERRAND                                FR  4547N 00310E   330   
+074810 LYON                                            FR  4544N 00505E   240   
+075100 BORDEAUX                                        FR  4450N 00042W    61   
+076300 TOULOUSE                                        FR  4338N 00122E   153   
+076430 MONTPELLIER                                     FR  4335N 00358E     6   
+076450 NIMES                                           FR  4352N 00424E    62   
+076500 MARSEILLE                                       FR  4327N 00514E    36   
+076900 NICE                                            FR  4339N 00712E    10   
+080010 LA CORUNA                                       SP  4322N 00825W    67   
+080230 SANTANDER                                       SP  4328N 00349W    65   
+080420 SANTIAGO DE COMPOSTELA                          SP  4254N 00826W   367   
+081605 ZARAGOZA                                        SP  4140N 00103W   263   
+081810 BARCELONA                                       SP  4117N 00204E     6   
+081840 GIRONA                                          SP  4154N 00246E   129   
+082020 SALAMANCA                                       SP  4057N 00530W   795   
+082210 MADRID                                          SP  4027N 00333W   582   
+082840 VALENCIA                                        SP  3930N 00028W    62   
+083060 PALMA                                           SP  3933N 00244E     8   
+083910 SEVILLA                                         SP  3725N 00554W    31   
+084190 GRANADA                                         SP  3711N 00347W   559   
+084820 MALAGA                                          SP  3640N 00429W     7   
+084950 GIBRALTAR                                       GI  3609N 00521W     5   
+085090 LAJES                                           AZ  3846N 02706W    55   
+085210 FUNCHAL                                         MD  3241N 01646W    55   
+085360 LISBON                                          PO  3847N 00908W   123   
+085430 VIANA DO CASTELO                                PO  4142N 00848W    18   
+085450 PORTO                                           PO  4114N 00841W    73   
+085490 COIMBRA                                         PO  4012N 00825W   140   
+085540 FARO                                            PO  3701N 00758W     4   
+085570 EVORA                                           PO  3834N 00754W   321   
+085620 BEJA                                            PO  3801N 00752W   247   
+085710 PORTALEGRE                                      PO  3917N 00725W   590   
+085750 BRAGANCA                                        PO  4148N 00644W   692   
+085940 SAL ISLAND                                      CV  1644N 02257W    55   
+100220 LECK                                            DL  5448N 00857E    13   
+100260 HUSUM                                           DL  5431N 00909E    37   
+100340 EGGEBEK                                         DL  5438N 00921E    22   
+100460 KIEL                                            DL  5423N 01009E    31   
+100910 KAP ARKONA                                      DL  5441N 01326E    41   
+101220 JEVER                                           DL  5332N 00753E    21   
+101290 BREMERHAVEN                                     DL  5332N 00835E    11   
+101360 NORDHOLZ (GER-NAVY)                             DL  5346N 00840E    31   
+101470 HAMBURG                                         DL  5338N 01000E    16   
+101840 GREIFSWALD                                      DL  5406N 01324E     6   
+102180 AHLHORN (GER-AFB)                               DL  5253N 00814E    56   
+102240 BREMEN                                          DL  5303N 00848E     5   
+103340 WUNSTORF                                        DL  5227N 00926E    70   
+103380 HANNOVER                                        DL  5228N 00942E    54   
+103840 BERLIN                                          DL  5228N 01324E    49   
+104000 DUSSELDORF                                      DL  5117N 00647E    44   
+104050 LAARBRUCH (RAF)                                 DL  5136N 00609E    31   
+104390 FRITZLAR                                        DL  5108N 00917E   181   
+104690 LEIPZIG                                         DL  5125N 01214E   133   
+104880 DRESDEN                                         DL  5108N 01347E   226   
+105010 AACHEN                                          DL  5047N 00606E   205   
+105130 KOLN                                            DL  5052N 00710E    99   
+105140 MENDIG (GER-ARMY)                               DL  5022N 00719E   191   
+105440 EHRENBERG                                       DL  5030N 00957E   925   
+106100 BITBURG                                         DL  4957N 00634E   374   
+106140 RAMSTEIN (USAFB)                                DL  4926N 00736E   238   
+106370 FRANKFURT AM MAIN                               DL  5003N 00836E   113   
+106850 HOF                                             DL  5019N 01153E   568   
+106870 GRAFENWOHR                                      DL  4942N 01157E   415   
+107220 SOLLINGEN (CAN-AFB)                             DL  4846N 00806E   128   
+107290 MANNHEIM                                        DL  4931N 00833E   100   
+107340 HEIDELBERG                                      DL  4924N 00839E   109   
+107380 STUTTGART                                       DL  4841N 00913E   419   
+108050 LAHR                                            DL  4822N 00750E   156   
+108530 NEUBURG                                         DL  4843N 01113E   387   
+108570 LANDSBERG                                       DL  4804N 01054E   628   
+108660 MUNICH                                          DL  4808N 01142E   529   
+109470 MEMMINGEN                                       DL  4759N 01014E   644   
+110100 LINZ                                            OS  4814N 01412E   313   
+110350 VIENNA: HOHE WARTE                              OS  4815N 01622E   200   
+110360 VIENNA: SCHWECHAT                               OS  4807N 01634E   190   
+111200 INNSBRUCK                                       OS  4716N 01121E   593   
+111500 SALZBURG                                        OS  4748N 01300E   450   
+111570 AIGEN/ENNSTAL (MIL)                             OS  4732N 01408E   649   
+111650 ZELTWEG                                         OS  4712N 01445E   682   
+112310 KLAGENFURT                                      OS  4639N 01420E   452   
+112400 GRAZ                                            OS  4700N 01526E   347   
+114060 CHEB                                            CZ  5005N 01224E   471   
+114480 PLZEN                                           CZ  4939N 01316E   364   
+115180 PRAGUE                                          CZ  5006N 01417E   366   
+116590 PRIBYSLAV                                       CZ  4935N 01546E   536   
+117230 BRNO                                            CZ  4909N 01642E   246   
+117350 PRADED MOUNTAIN                                 CZ  5004N 01714E  1492   
+117820 OSTRAVA                                         CZ  4941N 01807E   256   
+118160 BRATISLAVA                                      CZ  4812N 01712E   130   
+118410 ZILINA                                          CZ  4914N 01837E   315   
+119160 CHOPOK MOUNTAIN                                 CZ  4856N 01935E  2012   
+119300 LOMNICKY STIT(PEAK)                             CZ  4912N 02013E  2635   
+119680 KOSICE                                          CZ  4842N 02116E   232   
+121000 KOLOBRZEG                                       PL  5411N 01535E     5   
+121500 GDANSK                                          PL  5423N 01828E   138   
+121950 SUWALKI                                         PL  5408N 02257E   186   
+122050 SZCZECIN                                        PL  5324N 01437E     3   
+122500 TORUN                                           PL  5302N 01835E    72   
+122950 BIALYSTOK                                       PL  5306N 02310E   151   
+123300 POZNAN                                          PL  5225N 01650E    92   
+123750 WARSAW                                          PL  5210N 02058E   107   
+124240 WROCLAW                                         PL  5106N 01653E   121   
+124650 LODZ                                            PL  5144N 01924E   188   
+124950 LUBLIN                                          PL  5113N 02224E   240   
+125100 SNEZKA                                          PL  5044N 01544E  1613   
+125600 KATOWICE                                        PL  5014N 01902E   284   
+125660 KRAKOW                                          PL  5005N 01948E   237   
+125700 KIELCE                                          PL  5049N 02042E   261   
+126950 PRZEMYSL                                        PL  4948N 02246E   280   
+128120 SZOMBATHELY                                     HU  4716N 01638E   221   
+128390 BUDAPEST                                        HU  4726N 01916E   185   
+128600 SZOLNOK                                         HU  4710N 02014E    85   
+128820 DEBRECEN                                        HU  4729N 02138E   112   
+129250 NAGYKANIZSA                                     HU  4627N 01659E   141   
+129350 SIOFOK                                          HU  4655N 01802E   108   
+129420 PECS                                            HU  4600N 01814E   203   
+130140 LJUBLJANA                                       LJ  4613N 01429E   385   
+130670 PALIC                                           YG  4606N 01946E   105   
+131310 ZAGREB                                          RH  4544N 01604E   107   
+132090 PULA                                            RH  4454N 01355E    63   
+132420 BANJA LUKA                                      YG  4447N 01713E   156   
+132720 BELGRADE                                        YG  4449N 02017E    99   
+133330 SPLIT                                           RH  4332N 01618E    21   
+134620 TITOGRAD                                        YG  4222N 01915E    33   
+135860 SKOPJE                                          YG  4158N 02139E   239   
+150100 SATU MARE                                       RO  4747N 02253E   124   
+151200 CLUJ-NAPOCA                                     RO  4647N 02334E   413   
+152470 TIMISOARA                                       RO  4546N 02115E    88   
+152800 OMUL MOUNTAIN                                   RO  4527N 02527E  2509   
+153100 GALATI                                          RO  4530N 02801E    72   
+154200 BUCHAREST                                       RO  4430N 02608E    91   
+154500 CRAIOVA                                         RO  4414N 02352E   195   
+154800 CONSTANTA                                       RO  4413N 02838E    14   
+155110 LOM                                             BU  4349N 02315E    33   
+155350 RUSE                                            BU  4351N 02557E    45   
+155520 VARNA                                           BU  4312N 02755E    43   
+156140 SOFIA                                           BU  4239N 02323E   595   
+156150 MUSALA                                          BU  4211N 02335E  2927   
+156250 PLOVDIV                                         BU  4208N 02445E   185   
+156270 BOTEVGRAD                                       BU  4240N 02450E  2389   
+156550 BURGAS                                          BU  4229N 02729E    28   
+160520 PIAN ROSA (MTN TOP)                             IY  4556N 00742E  3488   
+160590 TORINO                                          IY  4513N 00739E   287   
+160660 MILAN: MALPENSA                                 IY  4537N 00844E   211   
+160800 MILAN: LINATE                                   IY  4526N 00917E   103   
+161050 VENICE                                          IY  4530N 01220E     6   
+161080 RONCHI LEGIONARI AB                             IY  4549N 01329E    12   
+161200 GENOVA                                          IY  4425N 00851E     3   
+161400 BOLOGNA                                         IY  4432N 01118E    42   
+161580 PISA                                            IY  4341N 01023E     1   
+161810 PERUGIA                                         IY  4305N 01230E   205   
+162420 ROME                                            IY  4148N 01214E     3   
+162520 CAMPOBASSO                                      IY  4134N 01439E   807   
+162890 NAPLES                                          IY  4051N 01418E    72   
+163200 BRINDISI                                        IY  4039N 01757E    10   
+164050 PALERMO                                         IY  3811N 01306E    34   
+164200 MESSINA                                         IY  3812N 01533E    51   
+164600 CATANIA                                         IY  3728N 01503E    17   
+165970 LUQA                                            ML  3551N 01429E    91   
+166220 THESSALONIKI                                    GR  4031N 02258E     4   
+166270 ALEXANDROUPOLIS                                 GR  4051N 02555E     3   
+166430 PREVEZA                                         GR  3857N 02046E     4   
+166480 LARISA                                          GR  3938N 02225E    74   
+166820 ANDRAVIDA                                       GR  3755N 02117E    12   
+167100 TRIPOLIS                                        GR  3732N 02224E   652   
+167160 ATHENS                                          GR  3754N 02344E    15   
+167180 ELEVSIS                                         GR  3804N 02333E    31   
+167230 SAMOS                                           GR  3742N 02655E     7   
+167460 SOUDHA                                          GR  3529N 02407E   151   
+167490 RODHOS                                          GR  3624N 02805E    11   
+167540 IRAKLION                                        GR  3520N 02511E    39   
+170600 ISTANBUL                                        TU  4058N 02849E    37   
+170960 ERZURUM                                         TU  3955N 04116E  1758   
+171240 ESKISEHIR                                       TU  3947N 03034E   785   
+171280 ANKARA                                          TU  4007N 03259E   949   
+171700 VAN                                             TU  3827N 04319E  1661   
+172000 MALATYA                                         TU  3826N 03805E   849   
+172180 IZMIR                                           TU  3830N 02701E     5   
+173500 ADANA                                           TU  3700N 03525E    66   
+176000 PAPHOS                                          CY  3443N 03229E     8   
+176010 AKROTIRI                                        CY  3435N 03259E    23   
+176090 LARNACA                                         CY  3453N 03338E     2   
+221130 MURMANSK                                        RS  6858N 03303E    51   
+225500 ARKHANGEL'SK                                    RS  6432N 04028E    13   
+228200 PETROZAVODSK                                    RS  6149N 03416E   112   
+230740 DUDINKA                                         RA  6924N 08610E    19   
+238040 SYKTYVKAR                                       RA  6143N 05050E   119   
+246390 NYURBA                                          RA  6317N 11820E   129   
+249440 OLEKMINSK                                       RA  6024N 12025E   226   
+249590 YAKUTSK                                         RA  6205N 12945E   103   
+253780 EGVEKINOT                                       RA  6621N 17907W    26   
+254000 ZYRYANKA                                        RA  6544N 15054E    43   
+255510 MARKOVO                                         RA  6441N 17025E    33   
+255630 ANADYR'                                         RA  6447N 17734E    62   
+259130 MAGADAN                                         RA  5935N 15047E   118   
+259560 APUKA                                           RA  6027N 16935E     8   
+260380 TALLINN                                         BY  5921N 02448E    44   
+260630 LENINGRAD                                       RS  5958N 03018E     4   
+261150 KOPU/CAPE RISTNA                                BY  5855N 02204E     9   
+262580 PSKOV                                           RS  5748N 02825E    42   
+264060 LIEPAJA                                         BY  5633N 02101E     8   
+264220 RIGA                                            BY  5658N 02404E     3   
+265090 KLAIPEDA                                        BY  5542N 02109E    10   
+266290 KAUNAS                                          BY  5453N 02353E    75   
+266660 VITEBSK                                         BY  5510N 03008E   176   
+267020 KALININGRAD                                     BY  5442N 02037E    27   
+267300 VILNIUS                                         BY  5438N 02517E   156   
+267810 SMOLENSK                                        RS  5445N 03204E   241   
+268250 GRODNO                                          BY  5341N 02350E   135   
+268500 MINSK                                           BY  5352N 02732E   234   
+268630 MOGILEV                                         BY  5354N 03019E   193   
+268980 BRYANSK                                         RS  5320N 03414E   217   
+269610 BOBRUYSK                                        BY  5307N 02915E   165   
+270370 VOLOGDA                                         RS  5914N 03952E   131   
+271130 CHEREPOVETS                                     RS  5907N 03756E   131   
+271960 KIROV                                           RS  5839N 04937E   147   
+272250 RYBINSK                                         RS  5800N 03850E   114   
+275185 MOSCOW: VNUKOVO                                 RS  5539N 03716E   203   
+275320 VLADIMIR                                        RS  5608N 04023E   170   
+275530 GOR'KIY                                         RS  5613N 04349E    82   
+275950 KAZAN'                                          RS  5547N 04911E   116   
+276120 MOSCOW                                          RS  5545N 03738E   156   
+277030 KALUGA                                          RS  5434N 03622E   201   
+277310 RYAZAN'                                         RS  5437N 03943E   170   
+279060 OREL                                            RS  5300N 03602E   203   
+279280 YELETS                                          RS  5238N 03831E   168   
+279470 TAMBOV                                          RS  5244N 04128E   139   
+279620 PENZA                                           RS  5308N 04501E   174   
+280440 SEROV                                           RA  5936N 06032E   132   
+282250 PERM'                                           RA  5801N 05618E   172   
+282400 NIZHNIY TAGIL                                   RA  5753N 06004E   258   
+284110 IZHEVSK                                         RA  5649N 05316E   158   
+284400 SVERDLOVSK                                      RA  5648N 06038E   237   
+286420 CHELYABINSK                                     RA  5518N 06132E   227   
+286610 KURGAN                                          RA  5528N 06524E    79   
+286980 OMSK                                            RA  5456N 07324E   123   
+287220 UFA                                             RA  5445N 05600E   105   
+288380 MAGNITOGORSK                                    RA  5321N 05905E   382   
+289000 KUYBYSHEV                                       RA  5315N 05027E    44   
+289520 KUSTANAY                                        RA  5313N 06337E   156   
+292310 KOLPASHEVO                                      RA  5818N 08253E    76   
+295740 KRASNOYARSK                                     RA  5600N 09253E   277   
+295940 TAYSHET                                         RA  5557N 09800E   302   
+296340 NOVOSIBIRSK                                     RA  5502N 08254E   177   
+296420 KEMEROVO                                        RA  5523N 08604E   262   
+298380 BARNAUL                                         RA  5324N 08342E   252   
+298460 NOVOKUZNETSK                                    RA  5344N 08711E   308   
+298650 ABAKAN                                          RA  5345N 09124E   245   
+301170 UST'ILIMSK                                      RA  5802N 10244E   402   
+303090 BRATSK                                          RA  5604N 10150E   489   
+305040 TULUN                                           RA  5436N 10038E   522   
+307100 IRKUTSK                                         RA  5216N 10421E   513   
+307580 CHITA                                           RA  5201N 11320E   685   
+308230 ULAN UDE                                        RA  5148N 10726E   510   
+309250 KYAKHTA                                         RA  5022N 10627E   801   
+309650 BORZYA                                          RA  5023N 11631E   684   
+310040 ALDAN                                           RA  5837N 12522E   682   
+313690 NIKOLAYEVSK                                     RA  5309N 14042E    68   
+314450 SVOBODNYY                                       RA  5127N 12807E   197   
+315100 BLAGOVESHCHENSK                                 RA  5015N 12730E   137   
+315610 KOMSOMOL'SK                                     RA  5036N 13702E    19   
+317350 KHABAROVSK                                      RA  4831N 13510E    72   
+319600 VLADIVOSTOK                                     RA  4307N 13154E   184   
+320610 ALEKSANDROVSK                                   RA  5054N 14210E    31   
+321500 YUZHNO SAKHALINSK                               RA  4655N 14244E    31   
+321650 JUZNO-KURILSK                                   RA  4401N 14552E    40   
+321860 URUP ISLAND                                     RA  4612N 15030E    70   
+324080 UST'KAMCHATSK                                   RA  5613N 16228E    27   
+325400 PETROPAVLOVSK KAMCHATSKIY                       RA  5258N 15845E    24   
+325940 OZERNAJA                                        RA  5129N 15629E    29   
+326180 NIKOL'SKOYE                                     RA  5512N 16559E     6   
+330410 GOMEL'                                          BY  5227N 03100E   127   
+331350 CHERNIGOV                                       UR  5129N 03117E   137   
+332750 SUMY                                            UR  5053N 03447E   174   
+333010 ROVNO                                           UR  5035N 02608E   234   
+333250 ZHITOMIR                                        UR  5016N 02838E   227   
+333450 KIEV                                            UR  5024N 03027E   168   
+335060 POLTAVA                                         UR  4936N 03433E   159   
+335620 VINNITSA                                        UR  4914N 02828E   298   
+336310 UZHGOROD                                        UR  4838N 02216E   118   
+336580 CHERNOVTSKY                                     UR  4816N 02558E   240   
+337110 KIROVOGRAD                                      UR  4829N 03215E   172   
+337910 KRIVOY ROG                                      UR  4756N 03320E   125   
+338150 KISHINEV                                        UR  4701N 02852E   180   
+338370 ODESSA                                          UR  4629N 03038E    35   
+339020 KHERSON                                         UR  4640N 03237E    48   
+339460 SIMFEROPOL'                                     UR  4501N 03359E   181   
+339830 KERCH                                           UR  4524N 03625E    49   
+340090 KURSK                                           RS  5144N 03616E   210   
+341220 VORONEZH                                        RS  5142N 03910E   154   
+341720 SARATOV                                         RS  5134N 04602E   156   
+343000 KHAR'KOV                                        UR  4952N 03608E   152   
+345040 DNEPROPETROVSK                                  UR  4822N 03505E   142   
+345190 DONETSK                                         UR  4804N 03746E   226   
+345230 VOROSHILOVGRAD                                  UR  4836N 03916E    62   
+345600 VOLGOGRAD                                       RS  4841N 04421E   145   
+346010 ZAPAROZH'YE                                     UR  4748N 03515E    86   
+347120 ZDANOV                                          UR  4704N 03730E    70   
+347310 ROSTOV-NA-DONU                                  RS  4715N 03949E    77   
+348800 ASTRAKHAN'                                      RS  4616N 04802E    18   
+349290 KRASNODAR                                       RS  4502N 03909E    33   
+351080 URAL'SK                                         RA  5115N 05124E    36   
+351210 ORENBURG                                        RA  5147N 05513E   109   
+351880 TSELINOGRAD                                     RA  5108N 07122E   348   
+352290 AKTYUBINSK                                      RA  5018N 05714E   227   
+353940 KARAGANDA                                       RA  4948N 07308E   555   
+357000 GUR'YEV                                         RA  4701N 05151E   -15   
+360030 PAVLODAR                                        RA  5217N 07657E   123   
+360340 RUBTSOVSK                                       RA  5130N 08113E   215   
+361770 SEMIPALATINSK                                   RA  5021N 08015E   196   
+368700 ALMA ATA                                        RA  4314N 07656E   847   
+369820 TJAN-SAN (MTN STN)                              RA  4155N 07814E  3614   
+370310 ARMAVIR                                         RS  4459N 04107E   160   
+371710 SOCHI                                           RS  4327N 03954E    16   
+372350 GROZNYY                                         RS  4321N 04541E   162   
+372600 SUKHUMI                                         RS  4252N 04108E    13   
+373950 KUTAISI                                         RS  4216N 04238E   116   
+374840 BATUMI                                          RS  4139N 04138E     6   
+375490 TBILISI                                         RS  4141N 04457E   467   
+377890 YEREVAN                                         RS  4008N 04428E   890   
+383410 DZHAMBUL                                        RA  4251N 07123E   653   
+383530 FRUNZE                                          RA  4251N 07432E   635   
+383920 TASHAUZ                                         RA  4150N 05959E    88   
+384570 TASHKENT                                        RA  4116N 06916E   489   
+385990 LENINABAD                                       RA  4013N 06944E   428   
+386960 SAMARKAND                                       RA  3942N 06700E   724   
+388360 DUSHANBE                                        RA  3833N 06847E   803   
+388800 ASHKHABAD                                       RA  3758N 05820E   210   
+400800 DAMASCUS                                        SY  3325N 03631E   605   
+401760 TEL AVIV-YAFO                                   IS  3206N 03447E     4   
+401800 LOD                                             IS  3200N 03454E    49   
+401840 JERUSALEM                                       IS  3147N 03513E   754   
+401980 OVDA (ISR-AFB/CIV)                              IS  3000N 03450E   432   
+401990 ELAT                                            IS  2933N 03457E    13   
+402700 AMMAN                                           JD  3159N 03559E   773   
+403560 TURAYF                                          SD  3141N 03840E   813   
+403570 'AR'AR                                          SD  3054N 04108E   552   
+403610 AL JAWF                                         SD  2947N 04006E   684   
+403620 RAFHA                                           SD  2938N 04329E   447   
+403730 HAFAR AL BATIN                                  SD  2820N 04607E   355   
+403750 TABUK                                           SD  2822N 03638E   770   
+403940 HA'IL                                           SD  2726N 04141E  1013   
+404000 AL WAJH                                         SD  2612N 03628E    16   
+404050 QASIM                                           SD  2618N 04346E   650   
+404160 AZ ZAHRAN                                       SD  2616N 05009E    17   
+404200 AL AHSA                                         SD  2517N 04929E   172   
+404300 AL MADINAH                                      SD  2433N 03942E   631   
+404380 RIYADH                                          SD  2443N 04643E   612   
+404390 YANBU'AL BAHR                                   SD  2409N 03804E     1   
+405820 KUWAIT                                          KW  2913N 04759E    55   
+410240 JIDDAH                                          SD  2140N 03909E    12   
+410300 MAKKAH                                          SD  2129N 03950E   310   
+410360 AT TA'IF                                        SD  2129N 04033E  1449   
+410550 AL BAHA                                         SD  2018N 04138E  1656   
+411120 ABHA                                            SD  1814N 04239E  2084   
+411140 KHAMIS MUSHAYT                                  SD  1818N 04248E  2054   
+411400 JIZAN                                           SD  1654N 04235E     3   
+411500 MANAMA                                          BN  2616N 05039E     2   
+411700 AD DAWHAH                                       QT  2515N 05134E    10   
+411840 RA'S AL KHAYMAH                                 ER  2537N 05556E    31   
+411940 DUBAI                                           ER  2515N 05520E     5   
+411960 SHARJAH                                         ER  2520N 05531E    33   
+412170 ABU DHABI                                       ER  2426N 05439E    27   
+412560 MASQAT                                          OM  2335N 05817E    15   
+412880 TUR'AT MASIRAH                                  OM  2040N 05854E    19   
+413140 THAMARIT                                        OM  1740N 05402E   445   
+413160 SALALAH                                         OM  1702N 05405E    20   
+417800 KARACHI                                         PK  2454N 06708E    22   
+421820 NEW DELHI                                       IN  2835N 07712E   216   
+423480 JAIPUR                                          IN  2649N 07548E   390   
+423690 LUCKNOW                                         IN  2645N 08053E   128   
+424920 PATNA                                           IN  2536N 08506E    60   
+426470 AHMADABAD                                       IN  2304N 07238E    55   
+426670 BHOPAL                                          IN  2317N 07721E   523   
+428090 CALCUTTA                                        IN  2239N 08827E     6   
+428670 NAGPUR                                          IN  2106N 07903E   310   
+430030 BOMBAY                                          IN  1907N 07251E    14   
+430630 POONA                                           IN  1832N 07351E   559   
+431170 SHOLAPUR                                        IN  1740N 07554E   479   
+431280 HYDERABAD                                       IN  1727N 07828E   545   
+431920 GOA/PANAJI                                      IN  1529N 07349E    60   
+432790 MADRAS                                          IN  1300N 08011E    16   
+432950 BANGALORE                                       IN  1258N 07735E   921   
+433290 CUDDALORE                                       IN  1146N 07946E    12   
+433710 TRIVANDRUM                                      IN  0829N 07657E    64   
+442120 ULAANGOM                                        MO  4958N 09205E   936   
+442590 CHOYBALSAN                                      MO  4804N 11430E   756   
+442920 ULAANBATAAR                                     MO  4756N 10659E  1316   
+450070 KOWLOON                                         HK  2220N 11411E    24   
+450110 MACAU                                           MU  2212N 11332E    59   
+466860 CHIANG KAI SHEK                                 TW  2505N 12113E    33   
+466960 TAIPEI                                          TW  2504N 12133E     6   
+466990 HUALIEN                                         TW  2359N 12136E    19   
+467400 KAOHSIUNG                                       TW  2235N 12021E     9   
+467410 T'AINAN (593580)                                TW  2300N 12013E    14   
+467510 T'AICHUNG                                       TW  2411N 12039E   112   
+467570 HSINCHU CITY                                    TW  2450N 12000E    27   
+470080 CH'ONGJIN                                       KR  4147N 12949E    43   
+470310 CHANGJIN                                        KR  4022N 12715E  1081   
+470350 SINUIJU                                         KR  4006N 12423E     7   
+470410 HAMHUNG                                         KR  3956N 12733E    38   
+470500 ANJU                                            KR  3937N 12539E    27   
+470550 WONSAN                                          KR  3911N 12726E    36   
+470580 P'YONGYANG                                      KR  3902N 12547E    38   
+470600 NAMP'O                                          KR  3843N 12522E    47   
+470690 HAEJU                                           KR  3802N 12542E    81   
+471050 KANGNUNG                                        KO  3745N 12854E    27   
+471100 SEOUL                                           KO  3733N 12648E    19   
+471120 INCH'ON                                         KO  3729N 12638E    70   
+471220 OSAN                                            KO  3705N 12702E    12   
+471330 TAEJON                                          KO  3618N 12724E    78   
+471430 TAEGU                                           KO  3553N 12837E    61   
+471520 ULSAN                                           KO  3533N 12919E    33   
+471560 KWANGJU                                         KO  3508N 12655E    72   
+471820 CHEJU                                           KO  3330N 12633E    27   
+474010 WAKKANAI                                        JP  4525N 14141E    11   
+474070 ASAHIKAWA                                       JP  4346N 14222E   116   
+474120 SAPPORO                                         JP  4303N 14120E    19   
+474300 HAKODATE                                        JP  4149N 14045E    36   
+475750 AOMORI                                          JP  4049N 14046E     3   
+475840 MORIOKA                                         JP  3942N 14110E   157   
+475900 SENDAI                                          JP  3816N 14054E    43   
+476040 NIIGATA                                         JP  3755N 13903E     7   
+476180 MATSUMOTO                                       JP  3615N 13758E   611   
+476240 MAEBASHI                                        JP  3624N 13904E   113   
+476350 NAGOYA                                          JP  3515N 13656E    17   
+476580 SHIZUHAMA (JASDF)                               JP  3449N 13818E    10   
+476630 OWASE                                           JP  3404N 13612E    27   
+476710 TOKYO: INTL AIRPORT                             JP  3533N 13947E     8   
+476790 ATSUGI                                          JP  3527N 13927E    65   
+476810 HAMAMATSU                                       JP  3445N 13742E    48   
+476860 NEW TOKYO INTL ARPT                             JP  3546N 14023E    44   
+477150 HYAKURI (JASDF)                                 JP  3611N 14025E    35   
+477430 MIHO (CIV/JASDF)                                JP  3529N 13315E     9   
+477500 MAIZURU                                         JP  3527N 13519E    22   
+477620 SHIMONOSEKI                                     JP  3357N 13056E    19   
+477650 HIROSHIMA                                       JP  3424N 13228E    53   
+477710 OSAKA                                           JP  3447N 13527E    15   
+478080 FUKUOKA                                         JP  3335N 13027E    12   
+478150 OITA                                            JP  3314N 13137E    13   
+478170 NAGASAKI                                        JP  3244N 12952E    35   
+478190 KUMAMOTO                                        JP  3249N 13043E    39   
+478270 KAGOSHIMA                                       JP  3134N 13033E     5   
+478540 NYUTABARU (JASDF)                               JP  3205N 13127E    82   
+478870 MATSUYAMA                                       JP  3350N 13247E    34   
+478980 TOSASHIMIZU                                     JP  3243N 13301E    33   
+479090 NAZE                                            JP  2823N 12930E     7   
+479270 MIYAKO JIMA ISLAND                              JP  2447N 12517E    41   
+479300 NAHA                                            JP  2611N 12739E     8   
+479310 KADENA                                          JP  2621N 12746E    45   
+480960 RANGOON                                         BM  1654N 09611E    29   
+483030 CHIANG RAI                                      TH  1955N 09950E   395   
+483270 CHIANG MAI                                      TH  1847N 09859E   314   
+483300 PHRAE                                           TH  1810N 10010E   162   
+483760 TAK                                             TH  1653N 09909E   124   
+483790 PHETCHABUN                                      TH  1626N 10109E   116   
+484560 BANGKOK                                         TH  1355N 10036E    12   
+485170 CHUMPHON                                        TH  1029N 09911E     5   
+485690 HAT YAI                                         TH  0655N 10026E    35   
+486010 GEORGE TOWN                                     MS  0518N 10016E     4   
+486150 KOTA BAHARU                                     MS  0610N 10217E     5   
+486200 SITIAWAN                                        MS  0413N 10042E     8   
+486470 KUALA LUMPUR                                    MS  0307N 10133E    22   
+486570 KUANTAN                                         MS  0347N 10313E    16   
+486650 MALACCA                                         MS  0216N 10215E     9   
+486980 SINGAPORE                                       SR  0122N 10359E    16   
+488200 HANOI                                           VS  2101N 10548E     6   
+488550 DA NANG                                         VS  1602N 10811E     7   
+489000 HO CHI MINH CITY                                VS  1049N 10640E    19   
+505570 NENJIANG                                        CI  4910N 12514E   243   
+507450 QIQIHAR                                         CI  4723N 12355E   148   
+507740 YICHUN                                          CI  4743N 12854E   232   
+508540 ANDA                                            CI  4623N 12519E   150   
+509530 HARBIN                                          CI  4545N 12646E   143   
+509780 JIXI                                            CI  4517N 13057E   234   
+514310 YINING                                          CI  4357N 08120E   663   
+514630 URUMQI                                          CI  4347N 08737E   919   
+516560 KORLA                                           CI  4145N 08608E   933   
+517090 KASHI                                           CI  3928N 07559E  1291   
+518480 ANDIRLANGAR                                     CI  3756N 08339E  1264   
+522030 HAMI                                            CI  4249N 09331E   739   
+524950 BAYAN MOD                                       CI  4045N 10430E  1329   
+528180 GOLMUD                                          CI  3625N 09454E  2809   
+528660 XINING                                          CI  3637N 10146E  2262   
+528890 LANZHOU                                         CI  3603N 10353E  1518   
+530680 ERENHOT                                         CI  4339N 11200E   966   
+534630 HOHHOT                                          CI  4049N 11141E  1065   
+534870 DATONG                                          CI  4006N 11320E  1069   
+536140 YINCHUAN                                        CI  3829N 10613E  1112   
+536980 SHIJIAZHUANG                                    CI  3802N 11425E    81   
+537720 TAIYUAN                                         CI  3747N 11233E   779   
+538980 ANYANG                                          CI  3607N 11422E    76   
+540940 MUDANJIANG                                      CI  4434N 12936E   242   
+541610 CHANGCHUN                                       CI  4354N 12513E   238   
+543370 JINZHOU                                         CI  4108N 12107E    70   
+543420 SHENYANG                                        CI  4146N 12326E    43   
+544010 ZHANGJIAKOU                                     CI  4047N 11453E   726   
+544710 YINGKOU                                         CI  4040N 12212E     4   
+544970 DANDONG                                         CI  4003N 12420E    14   
+545110 BEIJING                                         CI  3956N 11617E    55   
+545270 TIANJIN                                         CI  3906N 11710E     5   
+545340 TANGSHAN                                        CI  3940N 11809E    29   
+546020 BAODING                                         CI  3851N 11534E    19   
+546620 DALIAN                                          CI  3854N 12138E    97   
+548230 JINAN                                           CI  3641N 11659E    58   
+548430 WEIFANG                                         CI  3642N 11905E    51   
+548570 QINGDAO                                         CI  3604N 12020E    77   
+555910 LHASA                                           CI  2940N 09108E  3650   
+562940 CHENGDU                                         CI  3040N 10401E   508   
+564440 DEQEN                                           CI  2830N 09854E  3488   
+567780 KUNMING                                         CI  2501N 10241E  1892   
+570360 XI'AN                                           CI  3418N 10856E   398   
+570830 ZHENGZHOU                                       CI  3443N 11339E   111   
+574610 YICHANG                                         CI  3042N 11118E   134   
+574940 WUHAN                                           CI  3037N 11408E    23   
+575840 YUEYANG                                         CI  2923N 11305E    52   
+576870 CHANGSHA (576790)                               CI  2814N 11252E    68   
+578160 GUIYANG                                         CI  2635N 10643E  1074   
+579570 GUILIN                                          CI  2520N 11018E   166   
+580270 XUZHOU                                          CI  3417N 11709E    42   
+582210 BENGBU                                          CI  3257N 11722E    22   
+582380 NANJING                                         CI  3200N 11848E    12   
+583210 HEFEI                                           CI  3152N 11714E    36   
+583670 SHANGHAI                                        CI  3110N 12126E     7   
+584570 HANGZHOU                                        CI  3014N 12010E    43   
+584770 DINGHAI                                         CI  3002N 12207E    37   
+585270 JINGDEZHEN                                      CI  2918N 11712E    60   
+586060 NANCHANG                                        CI  2836N 11555E    50   
+586590 WENZHOU                                         CI  2801N 12040E     7   
+588470 FUZHOU                                          CI  2605N 11917E    85   
+590460 LIUZHOU                                         CI  2421N 10924E    97   
+590820 SHAOGUAN                                        CI  2448N 11335E    68   
+591340 XIAMEN                                          CI  2429N 11805E   139   
+592870 GUANGZHOU                                       CI  2308N 11319E     8   
+593160 SHANTOU                                         CI  2324N 11641E     3   
+594170 LONGZHOU                                        CI  2222N 10645E   129   
+594310 NANNING                                         CI  2249N 10821E    73   
+596580 ZHANJIANG                                       CI  2113N 11024E    28   
+599480 YAXIAN                                          CI  1814N 10931E     7   
+600250 SANTA CRUZ DE TENERIFE                          CR  2803N 01634W    72   
+600300 LAS PALMAS                                      CR  2756N 01523W    25   
+601010 TANGER                                          MC  3544N 00554W    21   
+601070 AL HOCEIMA                                      MC  3511N 00351W    14   
+601150 OUJDA                                           MC  3447N 00156W   470   
+601550 CASABLANCA                                      MC  3334N 00740W    62   
+601560 CASABLANCA/NOUASSER                             MC  3322N 00735W   206   
+601850 SAFI                                            MC  3217N 00914W    45   
+601950 MIDELT                                          MC  3241N 00444W  1515   
+602650 OUARZAZATE                                      MC  3056N 00654W  1140   
+603600 ANNABA                                          AL  3650N 00749E     4   
+603900 ALGIERS                                         AL  3643N 00315E    25   
+604190 CONSTANTINE                                     AL  3617N 00637E   694   
+604750 TEBESSA                                         AL  3529N 00808E   813   
+604900 ORAN                                            AL  3538N 00036W    90   
+605250 BISKRA                                          AL  3448N 00544E    87   
+605900 EL GOLEA                                        AL  3034N 00252E   397   
+606110 I-N-AMENAS                                      AL  2803N 00938E   562   
+606300 I-N-SALAH                                       AL  2712N 00228E   293   
+606800 TAMANRASSET                                     AL  2247N 00531E  1378   
+607140 BIZERTE                                         TS  3715N 00948E     3   
+607150 TUNIS                                           TS  3650N 01014E     4   
+607200 KELIBIA                                         TS  3651N 01105E    30   
+607350 KAIROUAN                                        TS  3540N 01006E    68   
+607450 GAFSA                                           TS  3425N 00849E   314   
+607650 GABES                                           TS  3353N 01006E     5   
+610240 AGADEZ                                          NR  1658N 00759E   502   
+610520 NIAMEY                                          NR  1329N 00210E   227   
+610910 MAGARIA                                         NR  1259N 00856E   403   
+610990 GAYA                                            NR  1153N 00327E   203   
+612910 BAMAKO                                          MI  1232N 00757W   381   
+614150 NOUADHIBOU                                      MT  2056N 01702W     3   
+614420 NOUAKCHOTT                                      MT  1806N 01557W     3   
+616000 SAINT LOUIS                                     SG  1603N 01627W     4   
+616410 DAKAR                                           SG  1444N 01730W    24   
+616870 TAMBACOUNDA                                     SG  1346N 01341W    50   
+616950 ZIGUINCHOR                                      SG  1233N 01616W    23   
+619020 GEORGETOWN                                      AI  0758S 01424W    79   
+619670 DIEGO GARCIA ISLAND                             BT  0718S 07224E     3   
+620100 TRIPOLI                                         LY  3240N 01309E    81   
+620530 BANGHAZI                                        LY  3205N 02016E   132   
+623180 ALEXANDRIA                                      EG  3112N 02957E     7   
+623660 CAIRO                                           EG  3008N 03124E    74   
+624050 LUXOR                                           EG  2540N 03242E    88   
+624140 ASWAN                                           EG  2358N 03247E   194   
+636120 LODWAR                                          KN  0307N 03537E   515   
+637080 KISUMU                                          KN  0006S 03445E  1146   
+637140 NAKURU                                          KN  0016S 03606E  1901   
+637230 GARISSA                                         KN  0028S 03938E   147   
+637400 NAIROBI                                         KN  0119S 03655E  1624   
+638200 MOMBASA                                         KN  0402S 03937E    55   
+638940 DAR ES SALAAM                                   TN  0652S 03912E    55   
+644500 BRAZZAVILLE/MAYAMA                              CG  0415S 01515E   316   
+653300 PARAKOU                                         BJ  0921N 00237E   393   
+653440 COTONOU                                         BJ  0621N 00223E     9   
+655780 ABIDJAN                                         IV  0515N 00356W     8   
+670270 MAHAJANGA                                       MG  1540S 04621E    18   
+670830 ANTANANARIVO                                    MG  1848S 04729E  1276   
+677750 HARARE                                          ZW  1755S 03108E  1503   
+681740 PIETERSBURG                                     ZA  2352S 02927E  1222   
+682620 PRETORIA                                        ZA  2544S 02811E  1322   
+683680 JOHANNESBURG                                    ZA  2608S 02814E  1700   
+684420 BLOEMFONTEIN                                    ZA  2906S 02618E  1348   
+685880 DURBAN                                          ZA  2958S 03057E     8   
+688160 CAPE TOWN                                       ZA  3359S 01836E    42   
+688420 PORT ELIZABETH                                  ZA  3359S 02536E    60   
+689940 MARION ISLAND                                   ZA  4653S 03752E    22   
+700260 BARROW                                       AK US  7118N 15647W     4   
+700637 DEADHORSE                                    AK US  7012N 14828W    17   
+701330 KOTZEBUE                                     AK US  6652N 16238W     5   
+701740 BETTLES                                      AK US  6655N 15131W   196   
+701940 FORT YUKON                                   AK US  6634N 14516W   131   
+702000 NOME                                         AK US  6430N 16526W     7   
+702070 UNALAKLEET                                   AK US  6353N 16048W     6   
+702190 BETHEL                                       AK US  6047N 16148W    46   
+702220 GALENA                                       AK US  6444N 15656W    46   
+702310 MCGRATH                                      AK US  6258N 15537W   103   
+702320 ANIAK                                        AK US  6135N 15932W    26   
+702510 TALKEETNA                                    AK US  6218N 15006W   109   
+702590 KENAI                                        AK US  6034N 15115W    29   
+702600 NENANA                                       AK US  6433N 14905W   110   
+702610 FAIRBANKS: INT'L AIRPORT                     AK US  6449N 14752W   138   
+702650 FAIRBANKS: EIELSON AFB                       AK US  6440N 14706W   167   
+702670 BIG DELTA: FT.GREELY                         AK US  6400N 14544W   391   
+702700 ANCHORAGE: FORT RICHARDSON (702736)          AK US  6116N 14939W   115   
+702710 GULKANA                                      AK US  6209N 14527W   481   
+702720 ANCHORAGE: ELMENDORF AFB                     AK US  6115N 14948W    65   
+702730 ANCHORAGE: INT'L AIRPORT                     AK US  6110N 15001W    40   
+702750 VALDEZ                                       AK US  6108N 14621W    10   
+702910 NORTHWAY                                     AK US  6258N 14156W   525   
+702960 CORDOVA                                      AK US  6030N 14530W    13   
+703080 SAINT PAUL ISLAND                            AK US  5709N 17013W     9   
+703160 COLD BAY                                     AK US  5512N 16244W    31   
+703210 DILLINGHAM                                   AK US  5903N 15831W    29   
+703260 KING SALMON                                  AK US  5841N 15639W    15   
+703330 PORT HEIDEN                                  AK US  5657N 15837W    29   
+703400 ILIAMNA                                      AK US  5945N 15455W    49   
+703410 HOMER                                        AK US  5938N 15130W    22   
+703430 MIDDLETON ISLAND                             AK US  5926N 14620W    14   
+703500 KODIAK: STATE USCG BASE                      AK US  5745N 15230W    34   
+703610 YAKUTAT                                      AK US  5931N 13940W     9   
+703710 SITKA                                        AK US  5704N 13521W    20   
+703810 JUNEAU                                       AK US  5822N 13435W     7   
+703950 KETCHIKAN                                    AK US  5521N 13142W    29   
+703980 ANNETTE                                      AK US  5502N 13134W    34   
+704140 SHEMYA: EARECKSON AFS                        AK US  5243N 17407E    30   
+704540 ADAK: NAS                                    AK US  5153N 17639W     4   
+722010 KEY WEST                                     FL US  2433N 08145W     6   
+722020 MIAMI: INT'L AIRPORT                         FL US  2549N 08017W     4   
+722025 FORT LAUDERDALE/HOLLYWOOD                    FL US  2604N 08009W     7   
+722026 HOMESTEAD: AFB                               FL US  2529N 08023W     2   
+722029 MIAMI/KENDALL: NEW TAMIAMI AIRPORT           FL US  2539N 08026W     3   
+722030 WEST PALM BEACH                              FL US  2641N 08007W     6   
+722040 MELBOURNE                                    FL US  2806N 08039W    11   
+722045 VERO BEACH                                   FL US  2739N 08025W     8   
+722050 ORLANDO                                      FL US  2826N 08119W    32   
+722056 DAYTONA BEACH                                FL US  2911N 08103W    11   
+722060 JACKSONVILLE: INT'L AIRPORT                  FL US  3030N 08142W     9   
+722066 JACKSONVILLE: MAYPORT NAVAL STATION          FL US  3024N 08125W     5   
+722067 JACKSONVILLE: CECIL FIELD NAS                FL US  3013N 08153W    25   
+722070 SAVANNAH                                     GA US  3208N 08112W    15   
+722080 CHARLESTON                                   SC US  3254N 08002W    15   
+722085 BEAUFORT: MCAS                               SC US  3229N 08043W    12   
+722106 FORT MYERS                                   FL US  2635N 08152W     5   
+722110 TAMPA: INT'L AIRPORT                         FL US  2758N 08232W     3   
+722115 SARASOTA/BRADENTON                           FL US  2724N 08233W     9   
+722116 SAINT PETERSBURG                             FL US  2755N 08241W     3   
+722120 CROSS CITY                                   FL US  2937N 08306W    13   
+722130 WAYCROSS                                     GA US  3115N 08224W    46   
+722137 BRUNSWICK                                    GA US  3109N 08123W     6   
+722140 TALLAHASSEE                                  FL US  3023N 08422W    21   
+722146 GAINESVILLE                                  FL US  2941N 08216W    46   
+722160 ALBANY                                       GA US  3132N 08411W    59   
+722166 VALDOSTA: REGIONAL AIRPORT                   GA US  3047N 08317W    62   
+722170 MACON                                        GA US  3242N 08339W   110   
+722180 AUGUSTA                                      GA US  3322N 08158W    45   
+722190 ATLANTA                                      GA US  3339N 08425W   315   
+722200 APALACHICOLA                                 FL US  2944N 08502W     6   
+722210 VALPARAISO: EGLIN AFB                        FL US  3029N 08632W    26   
+722215 CRESTVIEW                                    FL US  3047N 08631W    65   
+722225 PENSACOLA: FOREST SHERMAN AFB                FL US  3021N 08719W     9   
+722226 MILTON: WHITING FIELD NAS                    FL US  3043N 08701W    61   
+722230 MOBILE                                       AL US  3041N 08815W    67   
+722250 COLUMBUS: FORT BENNING                       GA US  3220N 08500W    71   
+722255 COLUMBUS: METRO AIRPORT                      GA US  3231N 08456W   121   
+722260 MONTGOMERY                                   AL US  3218N 08624W    62   
+722268 DOTHAN                                       AL US  3119N 08527W   122   
+722269 OZARK: FORT RUCKER                           AL US  3117N 08543W    91   
+722270 MARIETTA: DOBBINS AFB                        GA US  3355N 08431W   326   
+722280 BIRMINGHAM                                   AL US  3334N 08645W   192   
+722286 TUSCALOOSA                                   AL US  3313N 08737W    52   
+722287 ANNISTON                                     AL US  3335N 08551W   186   
+722310 NEW ORLEANS: INT'L AIRPORT                   LA US  2959N 09015W     9   
+722315 NEW ORLEANS: LAKEFRONT AIRPORT               LA US  3003N 09002W     3   
+722317 BATON ROUGE                                  LA US  3032N 09109W    21   
+722340 MERIDIAN                                     MS US  3220N 08845W    94   
+722350 JACKSON                                      MS US  3219N 09005W   101   
+722358 MCCOMB                                       MS US  3111N 09028W   126   
+722359 GREENWOOD                                    MS US  3330N 09005W    47   
+722390 LEESVILLE: FORT POLK                         LA US  3103N 09312W   100   
+722400 LAKE CHARLES                                 LA US  3007N 09313W    10   
+722405 LAFAYETTE                                    LA US  3012N 09159W    13   
+722410 BEAUMONT/PORT ARTHUR                         TX US  2957N 09401W     7   
+722420 GALVESTON (722422: 722423)                   TX US  2918N 09448W    16   
+722430 HOUSTON: INTERCONTINENTAL AIRPORT            TX US  2958N 09521W    33   
+722435 HOUSTON: HOBBY AIRPORT                       TX US  2939N 09517W    14   
+722445 COLLEGE STATION/BRYAN                        TX US  3035N 09622W    98   
+722446 LUFKIN                                       TX US  3114N 09445W    88   
+722448 TYLER                                        TX US  3221N 09524W   166   
+722470 LONGVIEW (722447)                            TX US  3221N 09439W   124   
+722480 SHREVEPORT                                   LA US  3228N 09349W    79   
+722485 BOSSIER CITY: BARKSDALE AFB                  LA US  3230N 09340W    51   
+722486 MONROE                                       LA US  3231N 09202W    24   
+722500 BROWNSVILLE                                  TX US  2554N 09726W     6   
+722506 MCALLEN                                      TX US  2611N 09814W    33   
+722510 CORPUS CHRISTI                               TX US  2746N 09730W    13   
+722516 KINGSVILLE: NAS                              TX US  2730N 09749W    15   
+722517 ALICE                                        TX US  2744N 09802W    54   
+722520 LAREDO                                       TX US  2733N 09928W   155   
+722526 COTULLA                                      TX US  2827N 09913W   144   
+722530 SAN ANTONIO: INT'L AIRPORT                   TX US  2932N 09828W   242   
+722535 SAN ANTONIO: KELLY AFB                       TX US  2923N 09835W   210   
+722536 SAN ANTONIO: RANDOLPH AFB                    TX US  2932N 09817W   232   
+722540 AUSTIN                                       TX US  3018N 09742W   189   
+722550 VICTORIA                                     TX US  2851N 09655W    36   
+722556 BEEVILLE: CHASE FIELD NAS                    TX US  2822N 09740W    58   
+722560 WACO                                         TX US  3137N 09713W   155   
+722576 KILLEEN: FORT HOOD                           TX US  3104N 09750W   309   
+722577 TEMPLE                                       TX US  3109N 09724W   208   
+722590 DALLAS/FORT WORTH: INT'L AIRPORT             TX US  3254N 09702W   182   
+722595 FORT WORTH: CARSWELL AFB                     TX US  3246N 09727W   198   
+722596 FORT WORTH: MEACHAM FIELD                    TX US  3249N 09722W   216   
+722610 DEL RIO: INT'L AIRPORT                       TX US  2922N 10055W   307   
+722615 DEL RIO: LAUGHLIN AFB                        TX US  2922N 10047W   330   
+722620 GUADALUPE PASS                               TX US  3150N 10448W  1662   
+722630 SAN ANGELO                                   TX US  3122N 10030W   582   
+722640 MARFA                                        TX US  3022N 10401W  1481   
+722650 MIDLAND/ODESSA                               TX US  3157N 10211W   872   
+722660 ABILENE                                      TX US  3225N 09941W   546   
+722670 LUBBOCK: INT'L ARPT                          TX US  3339N 10149W   988   
+722675 LUBBOCK: REESE AFB                           TX US  3336N 10203W  1017   
+722680 ROSWELL                                      NM US  3318N 10432W  1118   
+722686 CLOVIS: CANNON AFB                           NM US  3423N 10319W  1309   
+722687 CARLSBAD                                     NM US  3220N 10416W  1004   
+722688 HOBBS                                        NM US  3241N 10313W  1115   
+722700 EL PASO                                      TX US  3148N 10624W  1194   
+722710 TRUTH OR CONSEQUENCES                        NM US  3314N 10716W  1481   
+722735 DOUGLAS                                      AZ US  3128N 10936W  1265   
+722740 TUCSON                                       AZ US  3207N 11056W   779   
+722747 SAFFORD: AGRI CENTER                         AZ US  3249N 10941W   950   
+722780 PHOENIX: INT'L AIRPORT                       AZ US  3326N 11201W   337   
+722785 PHOENIX: LUKE AFB                            AZ US  3332N 11223W   332   
+722800 YUMA                                         AZ US  3239N 11436W    63   
+722860 RIVERSIDE: MARCH AFB                         CA US  3353N 11716W   469   
+722865 ONTARIO                                      CA US  3403N 11736W   287   
+722866 SAN BERNARDINO: NORTON AFB                   CA US  3406N 11714W   353   
+722880 BURBANK/GLENDALE                             CA US  3412N 11821W   236   
+722900 SAN DIEGO: INT'L AIRPORT                     CA US  3244N 11710W     9   
+722926 OCEANSIDE: CAMP PENDLETON MCAS               CA US  3318N 11721W    24   
+722930 SAN DIEGO: MIRAMAR NAS (722908)              CA US  3251N 11707W   128   
+722950 LOS ANGELES                                  CA US  3356N 11824W    32   
+722970 LONG BEACH                                   CA US  3349N 11809W    12   
+722977 SANTA ANA                                    CA US  3341N 11752W    16   
+723013 WILMINGTON (723011)                          NC US  3416N 07754W    10   
+723040 CAPE HATTERAS                                NC US  3516N 07533W     3   
+723060 RALEIGH/DURHAM                               NC US  3552N 07847W   134   
+723066 GOLDSBORO: SEYMOUR JOHNSON AFB               NC US  3520N 07758W    33   
+723075 OCEANA: NAS                                  VA US  3649N 07602W     7   
+723080 NORFOLK                                      VA US  3654N 07612W     9   
+723086 NEWPORT NEWS                                 VA US  3708N 07630W    13   
+723090 CHERRY POINT: MCAS                           NC US  3454N 07653W     9   
+723095 NEW BERN                                     NC US  3504N 07703W     6   
+723096 JACKSONVILLE: NEW RIVER MCAF                 NC US  3443N 07727W     8   
+723100 COLUMBIA                                     SC US  3357N 08107W    69   
+723106 FLORENCE                                     SC US  3411N 07943W    45   
+723110 ATHENS                                       GA US  3357N 08319W   247   
+723120 GREER/GREENVILLE                             SC US  3454N 08213W   296   
+723125 ANDERSON                                     SC US  3430N 08243W   238   
+723140 CHARLOTTE                                    NC US  3513N 08056W   234   
+723145 HICKORY                                      NC US  3544N 08123W   362   
+723150 ASHEVILLE                                    NC US  3526N 08233W   661   
+723170 GREENSBORO                                   NC US  3605N 07957W   270   
+723183 BRISTOL (723181)                             TN US  3629N 08224W   463   
+723193 WINSTON-SALEM (723190: 723191)               NC US  3608N 08013W   296   
+723200 ROME                                         GA US  3421N 08510W   196   
+723230 HUNTSVILLE                                   AL US  3439N 08646W   196   
+723235 MUSCLE SHOALS/FLORENCE                       AL US  3445N 08737W   168   
+723240 CHATTANOOGA                                  TN US  3502N 08512W   210   
+723260 KNOXVILLE                                    TN US  3549N 08359W   299   
+723265 CROSSVILLE                                   TN US  3557N 08505W   573   
+723270 NASHVILLE                                    TN US  3608N 08641W   180   
+723300 POPLAR BLUFF                                 MO US  3646N 09028W   146   
+723306 COLUMBUS: AFB                                MS US  3339N 08827W    67   
+723320 TUPELO (723301: 723303)                      MS US  3416N 08846W   110   
+723340 MEMPHIS                                      TN US  3503N 09000W    87   
+723346 JACKSON                                      TN US  3536N 08855W   132   
+723347 DYERSBURG                                    TN US  3600N 08924W   103   
+723405 LITTLE ROCK: AFB                             AR US  3455N 09209W    95   
+723407 JONESBORO                                    AR US  3550N 09039W    80   
+723408 BLYTHEVILLE: EAKER AFB                       AR US  3558N 08957W    78   
+723415 HOT SPRINGS                                  AR US  3429N 09306W   165   
+723417 PINE BLUFF                                   AR US  3411N 09156W    63   
+723418 TEXARKANA                                    AR US  3327N 09359W   119   
+723419 EL DORADO                                    AR US  3313N 09248W    77   
+723440 FORT SMITH                                   AR US  3520N 09422W   141   
+723445 FAYETTEVILLE                                 AR US  3600N 09410W   381   
+723446 HARRISON                                     AR US  3616N 09309W   416   
+723489 CAPE GIRARDEAU                               MO US  3714N 08934W   104   
+723495 JOPLIN                                       MO US  3709N 09430W   299   
+723510 WICHITA FALLS: SHEPPARD AFB                  TX US  3359N 09830W   314   
+723520 ALTUS: AFB                                   OK US  3440N 09916W   420   
+723530 OKLAHOMA CITY: WILL ROGERS AIRPORT           OK US  3524N 09736W   397   
+723535 ENID: VANCE AFB                              OK US  3620N 09755W   398   
+723540 OKLAHOMA CITY: TINKER AFB                    OK US  3525N 09723W   394   
+723546 PONCA CITY                                   OK US  3644N 09706W   307   
+723550 LAWTON: FORT SILL/POST FIELD AF              OK US  3439N 09824W   362   
+723560 TULSA                                        OK US  3612N 09554W   206   
+723566 MCALESTER                                    OK US  3453N 09547W   235   
+723600 CLAYTON                                      NM US  3627N 10309W  1515   
+723627 GALLUP                                       NM US  3531N 10847W  1972   
+723630 AMARILLO                                     TX US  3514N 10142W  1099   
+723650 ALBUQUERQUE                                  NM US  3503N 10637W  1620   
+723658 FARMINGTON                                   NM US  3645N 10814W  1677   
+723676 TUCUMCARI                                    NM US  3511N 10336W  1239   
+723700 KINGMAN                                      AZ US  3516N 11357W  1033   
+723710 PAGE                                         AZ US  3656N 11127W  1304   
+723723 PRESCOTT (723721)                            AZ US  3439N 11225W  1537   
+723740 WINSLOW                                      AZ US  3501N 11044W  1488   
+723755 FLAGSTAFF                                    AZ US  3508N 11140W  2137   
+723815 BARSTOW/DAGGETT                              CA US  3451N 11647W   587   
+723816 LANCASTER/PALMDALE                           CA US  3444N 11813W   715   
+723825 VICTORVILLE: GEORGE AFB                      CA US  3435N 11723W   876   
+723830 SANDBERG                                     CA US  3445N 11844W  1379   
+723840 BAKERSFIELD                                  CA US  3526N 11903W   150   
+723860 LAS VEGAS: INT'L AIRPORT                     NV US  3605N 11510W   664   
+723865 NORTH LAS VEGAS: NELLIS AFB                  NV US  3614N 11502W   570   
+723870 MERCURY                                      NV US  3637N 11601W  1009   
+723890 FRESNO                                       CA US  3646N 11943W   100   
+723900 POINT PIEDRAS                                CA US  3540N 12117W    21   
+723910 OXNARD: PT. MUGU NAWS                        CA US  3407N 11907W     2   
+723925 SANTA BARBARA                                CA US  3426N 11950W     3   
+723940 SANTA MARIA                                  CA US  3454N 12027W    73   
+723965 PASO ROBLES                                  CA US  3540N 12038W   255   
+724010 RICHMOND                                     VA US  3730N 07720W    54   
+724016 CHARLOTTESVILLE                              VA US  3808N 07827W   195   
+724030 STERLING                                     VA US  3857N 07727W    98   
+724035 QUANTICO: MCAS                               VA US  3830N 07718W     4   
+724037 FORT BELVOIR                                 VA US  3843N 07711W    21   
+724040 LEXINGTON PARK: PATUXENT RIVER NAS           MD US  3817N 07624W    12   
+724045 SALISBURY                                    MD US  3820N 07531W    16   
+724050 WASHINGTON: NATIONAL AIRPORT                 VA US  3851N 07702W    20   
+724060 GLEN BURNIE/BALTIMORE: BWI AIRPORT           MD US  3911N 07640W    47   
+724070 ATLANTIC CITY                                NJ US  3927N 07434W    20   
+724075 MILLVILLE                                    NJ US  3922N 07504W    25   
+724080 PHILADELPHIA: INT'L AIRPORT                  PA US  3953N 07515W     9   
+724085 PHILADELPHIA: NORTHEAST AIRPORT              PA US  4005N 07501W    37   
+724086 PHILADELPHIA: WILLOW GROVE NAS               PA US  4012N 07509W   110   
+724088 DOVER: AFB                                   DE US  3908N 07528W     9   
+724089 WILMINGTON                                   DE US  3941N 07536W    24   
+724096 TRENTON/WRIGHTSTOWN: MCGUIRE AFB             NJ US  4001N 07436W    41   
+724100 LYNCHBURG                                    VA US  3720N 07912W   286   
+724110 ROANOKE                                      VA US  3719N 07958W   358   
+724125 BLUEFIELD                                    WV US  3718N 08112W   871   
+724140 CHARLESTON                                   WV US  3822N 08136W   299   
+724170 ELKINS                                       WV US  3853N 07951W   609   
+724175 CLARKSBURG                                   WV US  3918N 08014W   367   
+724176 MORGANTOWN                                   WV US  3939N 07955W   380   
+724177 MARTINSBURG                                  WV US  3924N 07759W   170   
+724210 COVINGTON/CINCINNATI OH: INT'L AIRPORT       KY US  3903N 08440W   267   
+724220 LEXINGTON                                    KY US  3802N 08436W   301   
+724230 LOUISVILLE                                   KY US  3811N 08544W   149   
+724236 JACKSON                                      KY US  3736N 08319W   421   
+724240 FORT KNOX: GODMAN AAF                        KY US  3754N 08558W   230   
+724243 LONDON/CORBIN (723290: 723291: 723293)       KY US  3705N 08405W   369   
+724250 HUNTINGTON                                   WV US  3822N 08233W   255   
+724273 PARKERSBURG (724270: 724271)                 WV US  3921N 08126W   262   
+724280 COLUMBUS: INT'L AIRPORT                      OH US  4000N 08253W   249   
+724285 COLUMBUS: RICKENBACKER AFB                   OH US  3949N 08256W   227   
+724286 ZANESVILLE                                   OH US  3957N 08154W   274   
+724290 DAYTON: INT'L AIRPORT                        OH US  3954N 08412W   306   
+724297 CINCINNATI: LUNKEN FIELD                     OH US  3906N 08425W   147   
+724320 EVANSVILLE                                   IN US  3803N 08732W   118   
+724338 BELLEVILLE: SCOTT AFB                        IL US  3833N 08951W   138   
+724340 ST. LOUIS: INT'L AIRPORT                     MO US  3845N 09022W   172   
+724345 CHESTERFIELD: SPIRIT OF ST. LOUIS AIRPORT    MO US  3840N 09039W   141   
+724350 PADUCAH (746715)                             KY US  3704N 08846W   126   
+724373 TERRE HAUTE (724370: 724371)                 IN US  3927N 08719W   178   
+724380 INDIANAPOLIS                                 IN US  3944N 08616W   246   
+724386 LAFAYETTE: PURDUE UNIV.                      IN US  4025N 08656W   185   
+724390 SPRINGFIELD                                  IL US  3951N 08940W   187   
+724396 QUINCY                                       IL US  3957N 09112W   234   
+724400 SPRINGFIELD                                  MO US  3714N 09323W   387   
+724450 COLUMBIA                                     MO US  3849N 09213W   274   
+724455 KIRKSVILLE                                   MO US  4006N 09233W   294   
+724456 VICHY/ROLLA                                  MO US  3808N 09146W   350   
+724460 KANSAS CITY                                  MO US  3919N 09443W   312   
+724467 WARRENSBURG/SEDALIA: WHITEMAN AFB            MO US  3844N 09333W   265   
+724500 WICHITA: AIRPORT                             KS US  3739N 09726W   408   
+724505 WICHITA: MCCONNELL AFB                       KS US  3737N 09716W   418   
+724506 HUTCHINSON                                   KS US  3804N 09752W   470   
+724507 CHANUTE                                      KS US  3740N 09529W   305   
+724510 DODGE CITY                                   KS US  3746N 09958W   790   
+724515 GARDEN CITY                                  KS US  3756N 10043W   881   
+724550 FT RILEY: MARSHALL AAF                       KS US  3903N 09646W   325   
+724555 MANHATTAN                                    KS US  3908N 09640W   322   
+724556 EMPORIA                                      KS US  3820N 09611W   368   
+724560 TOPEKA                                       KS US  3904N 09537W   270   
+724580 CONCORDIA                                    KS US  3933N 09739W   452   
+724585 RUSSELL                                      KS US  3852N 09849W   568   
+724586 SALINA                                       KS US  3848N 09739W   388   
+724620 ALAMOSA                                      CO US  3727N 10552W  2299   
+724635 LA JUNTA                                     CO US  3803N 10331W  1292   
+724640 PUEBLO                                       CO US  3817N 10431W  1439   
+724645 TRINIDAD                                     CO US  3716N 10420W  1756   
+724650 GOODLAND                                     KS US  3922N 10142W  1124   
+724660 COLORADO SPRINGS                             CO US  3849N 10443W  1881   
+724665 LIMON                                        CO US  3916N 10340W  1635   
+724675 EAGLE                                        CO US  3939N 10655W  1993   
+724690 DENVER                                       CO US  3945N 10452W  1625   
+724698 AKRON                                        CO US  4010N 10313W  1431   
+724699 BOULDER                                      CO US  3955N 10507W  1724   
+724700 PRICE                                        UT US  3937N 11045W  1799   
+724755 CEDAR CITY                                   UT US  3742N 11306W  1714   
+724760 GRAND JUNCTION                               CO US  3907N 10832W  1475   
+724810 MERCED: CASTLE AFB                           CA US  3723N 12034W    57   
+724835 SACRAMENTO: MATHER FIELD                     CA US  3833N 12118W    29   
+724836 SACRAMENTO: MCCLELLAN AFB                    CA US  3840N 12124W    23   
+724837 MARYSVILLE/YUBA CITY: BEALE AFB              CA US  3908N 12126W    34   
+724839 SACRAMENTO: METRO                            CA US  3842N 12135W     7   
+724855 TONOPAH                                      NV US  3803N 11705W  1654   
+724860 ELY                                          NV US  3917N 11451W  1909   
+724870 CALIENTE                                     NV US  3737N 11431W  1335   
+724880 RENO                                         NV US  3930N 11947W  1341   
+724915 MONTEREY                                     CA US  3635N 12151W    77   
+724917 SALINAS                                      CA US  3640N 12136W    26   
+724920 STOCKTON                                     CA US  3754N 12115W     8   
+724940 SAN FRANCISCO                                CA US  3737N 12223W     5   
+724945 SAN JOSE                                     CA US  3722N 12156W    17   
+725020 NEWARK                                       NJ US  4042N 07410W     9   
+725025 TETERBORO                                    NJ US  4051N 07404W     3   
+725030 NEW YORK: LA GUARDIA AIRPORT                 NY US  4046N 07354W     9   
+725035 CENTRAL ISLIP                                NY US  4048N 07306W    30   
+725036 POUGHKEEPSIE                                 NY US  4138N 07353W    51   
+725037 WHITE PLAINS                                 NY US  4104N 07342W   134   
+725038 NEWBURGH                                     NY US  4130N 07406W   150   
+725040 BRIDGEPORT                                   CT US  4110N 07308W     5   
+725060 EAST FALMOUTH: OTIS ANGB                     MA US  4139N 07031W    40   
+725070 PROVIDENCE                                   RI US  4144N 07126W    19   
+725080 WINDSOR LOCKS: BRADLEY FIELD                 CT US  4156N 07241W    55   
+725087 HARTFORD: BRAINARD FIELD                     CT US  4144N 07239W     6   
+725090 BOSTON                                       MA US  4222N 07102W     9   
+725095 WORCESTER                                    MA US  4216N 07153W   308   
+725097 WEYMOUTH: SOUTH WEYMOUTH NAS                 MA US  4209N 07056W    49   
+725115 HARRISBURG                                   PA US  4012N 07646W    94   
+725116 LANCASTER                                    PA US  4007N 07618W   123   
+725125 DU BOIS                                      PA US  4111N 07854W   554   
+725126 ALTOONA                                      PA US  4018N 07819W   458   
+725127 JOHNSTOWN                                    PA US  4019N 07850W   696   
+725130 WILKES-BARRE/SCRANTON                        PA US  4120N 07544W   289   
+725140 WILLIAMSPORT                                 PA US  4115N 07655W   160   
+725150 BINGHAMTON                                   NY US  4213N 07559W   497   
+725156 ELMIRA/CORNING                               NY US  4210N 07654W   291   
+725170 ALLENTOWN                                    PA US  4039N 07526W   117   
+725180 ALBANY                                       NY US  4245N 07348W    89   
+725185 GLENS FALLS                                  NY US  4320N 07337W   100   
+725190 SYRACUSE                                     NY US  4307N 07607W   124   
+725196 ROME: GRIFFISS AFB                           NY US  4314N 07524W   154   
+725200 PITTSBURGH: PITTSBURGH INT'L AIRPORT         PA US  4030N 08013W   373   
+725205 PITTSBURGH: ALLEGHENY CO. AIRPORT            PA US  4021N 07956W   382   
+725210 AKRON/CANTON                                 OH US  4055N 08126W   377   
+725240 CLEVELAND                                    OH US  4125N 08152W   245   
+725246 MANSFIELD                                    OH US  4049N 08231W   395   
+725250 YOUNGSTOWN                                   OH US  4116N 08040W   361   
+725260 ERIE                                         PA US  4205N 08011W   225   
+725266 BRADFORD                                     PA US  4148N 07838W   653   
+725280 BUFFALO                                      NY US  4256N 07844W   215   
+725287 NIAGARA FALLS                                NY US  4306N 07857W   180   
+725290 ROCHESTER                                    NY US  4307N 07740W   169   
+725300 CHICAGO: O'HARE INT'L AIRPORT                IL US  4159N 08754W   205   
+725305 WEST CHICAGO                                 IL US  4155N 08815W   231   
+725306 GLENVIEW: NAS                                IL US  4205N 08749W   199   
+725315 CHAMPAIGN/URBANA                             IL US  4002N 08817W   230   
+725316 DECATUR                                      IL US  3950N 08852W   208   
+725320 PEORIA                                       IL US  4040N 08941W   202   
+725330 FORT WAYNE                                   IN US  4100N 08512W   252   
+725335 PERU: GRISSOM AFB                            IN US  4039N 08609W   247   
+725340 CHICAGO: MEIGS FIELD                         IL US  4147N 08745W   190   
+725350 SOUTH BEND                                   IN US  4142N 08619W   236   
+725360 TOLEDO                                       OH US  4136N 08348W   211   
+725366 FINDLAY                                      OH US  4101N 08340W   247   
+725370 DETROIT: METRO                               MI US  4214N 08320W   202   
+725376 DETROIT: WILLOW RUN                          MI US  4214N 08332W   218   
+725377 MOUNT CLEMENS: SELFRIDGE ANGB                MI US  4237N 08250W   177   
+725386 HARBOR BEACH                                 MI US  4401N 08248W   183   
+725387 COPPER HARBOR                                MI US  4727N 08754W   186   
+725390 LANSING                                      MI US  4246N 08436W   266   
+725395 JACKSON                                      MI US  4216N 08428W   305   
+725400 SPICKARD/TRENTON                             MO US  4015N 09343W   270   
+725430 ROCKFORD                                     IL US  4212N 08906W   226   
+725440 MOLINE/DAVENPORT IA                          IL US  4127N 09031W   181   
+725450 CEDAR RAPIDS                                 IA US  4153N 09142W   265   
+725455 BURLINGTON                                   IA US  4047N 09108W   213   
+725460 DES MOINES                                   IA US  4132N 09339W   294   
+725465 OTTUMWA                                      IA US  4106N 09227W   258   
+725466 LAMONI                                       IA US  4037N 09357W   342   
+725470 DUBUQUE                                      IA US  4224N 09042W   329   
+725480 WATERLOO                                     IA US  4233N 09224W   268   
+725485 MASON CITY                                   IA US  4309N 09320W   370   
+725490 FORT DODGE                                   IA US  4233N 09411W   355   
+725500 OMAHA: EPPLEY AIRFIELD                       NE US  4118N 09554W   299   
+725510 LINCOLN                                      NE US  4051N 09645W   362   
+725520 GRAND ISLAND                                 NE US  4058N 09819W   566   
+725530 OMAHA: WSO                                   NE US  4122N 09601W   406   
+725540 BELLEVUE: OFFUTT AFB                         NE US  4107N 09555W   319   
+725560 NORFOLK                                      NE US  4159N 09726W   473   
+725570 SIOUX CITY                                   IA US  4224N 09623W   336   
+725610 SIDNEY                                       NE US  4106N 10259W  1312   
+725620 NORTH PLATTE                                 NE US  4108N 10041W   849   
+725640 CHEYENNE: WARREN AFB                         WY US  4109N 10449W  1872   
+725645 LARAMIE                                      WY US  4119N 10540W  2218   
+725660 SCOTTSBLUFF                                  NE US  4152N 10336W  1206   
+725670 VALENTINE                                    NE US  4252N 10033W   792   
+725690 CASPER                                       WY US  4255N 10628W  1612   
+725700 CRAIG                                        CO US  4030N 10732W  1915   
+725720 SALT LAKE CITY                               UT US  4047N 11158W  1288   
+725744 ROCK SPRINGS (725740: 725741)                WY US  4136N 10904W  2060   
+725755 OGDEN: HILL AFB                              UT US  4107N 11158W  1459   
+725760 LANDER                                       WY US  4249N 10844W  1694   
+725780 POCATELLO                                    ID US  4255N 11236W  1365   
+725784 ELK CITY                                     ID US  4549N 11526W  1249   
+725785 IDAHO FALLS                                  ID US  4331N 11204W  1445   
+725788 MCCALL                                       ID US  4453N 11606W  1531   
+725825 ELKO                                         NV US  4050N 11547W  1565   
+725830 WINNEMUCCA                                   NV US  4054N 11748W  1315   
+725845 BLUE CANYON                                  CA US  3917N 12043W  1611   
+725867 BURLEY                                       ID US  4233N 11346W  1265   
+725895 KLAMATH FALLS                                OR US  4209N 12144W  1247   
+725910 RED BLUFF                                    CA US  4009N 12215W   108   
+725920 REDDING (725915)                             CA US  4030N 12218W   153   
+725945 ARCATA/EUREKA                                CA US  4059N 12406W    66   
+725957 MOUNT SHASTA                                 CA US  4119N 12219W  1080   
+725970 MEDFORD                                      OR US  4222N 12252W   405   
+725975 SEXTON SUMMIT                                OR US  4237N 12322W  1171   
+726050 CONCORD                                      NH US  4312N 07130W   105   
+726055 PORTSMOUTH: PEASE AFB                        NH US  4305N 07049W    31   
+726060 PORTLAND                                     ME US  4339N 07019W    19   
+726088 BANGOR (726071)                              ME US  4448N 06850W    59   
+726116 LEBANON                                      NH US  4338N 07218W   182   
+726130 MOUNT WASHINGTON                             NH US  4416N 07118W  1910   
+726145 MONTPELIER/BARRE                             VT US  4412N 07234W   355   
+726170 BURLINGTON                                   VT US  4428N 07309W   104   
+726185 AUGUSTA                                      ME US  4419N 06948W   107   
+726223 MASSENA (726221)                             NY US  4456N 07451W    65   
+726225 PLATTSBURGH: AFB                             NY US  4439N 07328W    72   
+726227 WATERTOWN                                    NY US  4400N 07601W    99   
+726350 GRAND RAPIDS                                 MI US  4253N 08531W   245   
+726357 KALAMAZOO                                    MI US  4214N 08533W   266   
+726360 MUSKEGON                                     MI US  4310N 08615W   193   
+726370 FLINT                                        MI US  4258N 08345W   233   
+726375 PONTIAC/OAKLAND                              MI US  4240N 08325W   299   
+726379 SAGINAW                                      MI US  4332N 08405W   204   
+726387 TRAVERSE CITY                                MI US  4444N 08535W   190   
+726390 ALPENA                                       MI US  4504N 08334W   211   
+726395 OSCODA: WURTSMITH AFB                        MI US  4427N 08324W   193   
+726399 SEUL CHOIX POINT                             MI US  4555N 08555W   180   
+726400 MILWAUKEE                                    WI US  4257N 08754W   211   
+726410 MADISON                                      WI US  4308N 08920W   264   
+726430 LA CROSSE                                    WI US  4352N 09115W   202   
+726435 EAU CLAIRE                                   WI US  4452N 09129W   276   
+726440 ROCHESTER                                    MN US  4355N 09230W   402   
+726450 GREEN BAY                                    WI US  4429N 08808W   214   
+726456 OSHKOSH                                      WI US  4359N 08833W   246   
+726463 WAUSAU (726460: 726461)                      WI US  4456N 08938W   366   
+726500 SPENCER                                      IA US  4310N 09509W   408   
+726510 SIOUX FALLS                                  SD US  4335N 09644W   435   
+726530 CHAMBERLAIN                                  SD US  4348N 09919W   530   
+726540 HURON                                        SD US  4423N 09813W   393   
+726546 WATERTOWN                                    SD US  4455N 09709W   533   
+726550 SAINT CLOUD                                  MN US  4533N 09404W   312   
+726556 REDWOOD FALLS                                MN US  4433N 09505W   312   
+726557 ALEXANDRIA                                   MN US  4552N 09524W   434   
+726580 MINNEAPOLIS-ST. PAUL                         MN US  4453N 09313W   255   
+726590 ABERDEEN                                     SD US  4527N 09826W   396   
+726620 RAPID CITY                                   SD US  4403N 10304W   966   
+726650 GILLETTE                                     WY US  4421N 10532W  1230   
+726660 SHERIDAN                                     WY US  4446N 10658W  1209   
+726665 WORLAND                                      WY US  4358N 10757W  1294   
+726686 PIERRE                                       SD US  4423N 10017W   531   
+726700 CODY                                         WY US  4431N 10901W  1553   
+726710 BIG PINEY                                    WY US  4234N 11006W  2124   
+726770 BILLINGS                                     MT US  4548N 10832W  1088   
+726776 LEWISTOWN                                    MT US  4703N 10928W  1270   
+726785 BUTTE                                        MT US  4557N 11230W  1690   
+726797 BOZEMAN                                      MT US  4547N 11109W  1364   
+726810 BOISE                                        ID US  4334N 11613W   874   
+726815 MOUNTAIN HOME: AFB                           ID US  4303N 11552W   913   
+726830 BURNS (726838)                               OR US  4334N 11903W  1271   
+726835 REDMOND                                      OR US  4415N 12109W   938   
+726880 PENDLETON                                    OR US  4541N 11851W   456   
+726885 MEACHAM                                      OR US  4531N 11824W  1236   
+726886 BAKER CITY                                   OR US  4450N 11749W  1027   
+726917 NORTH BEND                                   OR US  4325N 12415W     4   
+726930 EUGENE                                       OR US  4407N 12313W   114   
+726940 SALEM                                        OR US  4455N 12300W    61   
+726980 PORTLAND                                     OR US  4536N 12236W    12   
+726986 HILLSBORO                                    OR US  4532N 12257W    62   
+727120 CARIBOU                                      ME US  4652N 06801W   190   
+727125 LIMESTONE: LORING AFB                        ME US  4657N 06753W   227   
+727340 SAULT STE. MARIE                             MI US  4628N 08422W   221   
+727347 PELLSTON                                     MI US  4534N 08448W   219   
+727430 MARQUETTE/ISHPEMING: AIRPORT                 MI US  4632N 08733W   434   
+727435 MARQUETTE/GWINN: K. I. SAWYER AFB            MI US  4621N 08724W   372   
+727440 HANCOCK                                      MI US  4710N 08830W   329   
+727450 DULUTH                                       MN US  4650N 09211W   432   
+727455 HIBBING                                      MN US  4723N 09250W   412   
+727470 INTERNATIONAL FALLS                          MN US  4834N 09323W   361   
+727500 BRAINERD: PEQUOT LAKES                       MN US  4636N 09419W   390   
+727530 FARGO                                        ND US  4654N 09648W   274   
+727535 JAMESTOWN                                    ND US  4656N 09841W   457   
+727554 TOFTE                                        MN US  4735N 09050W   241   
+727575 GRAND FORKS: AFB                             ND US  4758N 09724W   278   
+727580 DEVILS LAKE                                  ND US  4806N 09852W   443   
+727640 BISMARCK                                     ND US  4646N 10045W   506   
+727645 DICKINSON                                    ND US  4648N 10248W   789   
+727650 ROSEGLEN                                     ND US  4745N 10150W   624   
+727670 WILLISTON                                    ND US  4811N 10338W   581   
+727675 MINOT: AFB                                   ND US  4825N 10121W   508   
+727676 MINOT: INT'L AIRPORT                         ND US  4816N 10117W   523   
+727680 GLASGOW                                      MT US  4813N 10637W   700   
+727720 HELENA                                       MT US  4636N 11200W  1188   
+727730 MISSOULA                                     MT US  4655N 11405W   972   
+727750 GREAT FALLS: INT'L AIRPORT                   MT US  4729N 11122W  1115   
+727755 GREAT FALLS: MALMSTROM AFB                   MT US  4730N 11111W  1075   
+727770 HAVRE                                        MT US  4833N 10946W   792   
+727790 KALISPELL                                    MT US  4818N 11416W   906   
+727796 CUT BANK                                     MT US  4836N 11222W  1175   
+727810 YAKIMA                                       WA US  4634N 12032W   325   
+727815 STAMPEDE PASS                                WA US  4717N 12120W  1209   
+727825 WENATCHEE                                    WA US  4724N 12012W   379   
+727827 MOSES LAKE                                   WA US  4712N 11919W   361   
+727830 LEWISTON                                     ID US  4623N 11701W   438   
+727833 CHALLIS                                      ID US  4431N 11413W  1546   
+727836 MULLAN                                       ID US  4728N 11548W  1011   
+727840 HANFORD                                      WA US  4634N 11936W   223   
+727845 PASCO                                        WA US  4616N 11907W   124   
+727846 WALLA WALLA                                  WA US  4606N 11817W   367   
+727855 SPOKANE: FAIRCHILD AFB                       WA US  4737N 11739W   750   
+727910 ASTORIA                                      OR US  4609N 12353W     7   
+727920 OLYMPIA                                      WA US  4658N 12254W    61   
+727930 SEATTLE: INT'L AIRPORT                       WA US  4727N 12218W   137   
+727970 QUILLAYUTE                                   WA US  4757N 12433W    62   
+727976 BELLINGHAM                                   WA US  4848N 12232W    48   
+742060 TACOMA: MCCHORD AFB                          WA US  4708N 12229W    98   
+742300 MILES CITY (726675)                          MT US  4626N 10552W   801   
+743920 BRUNSWICK: NAS                               ME US  4353N 06956W    23   
+743945 MANCHESTER                                   NH US  4256N 07126W    71   
+744600 MARSEILLES                                   IL US  4122N 08841W   225   
+744860 NEW YORK: JOHN F KENNEDY AIRPORT             NY US  4039N 07347W     7   
+744865 WESTHAMPTON BEACH                            NY US  4051N 07238W    20   
+744900 BEDFORD: HANSCOM AFB                         MA US  4228N 07117W    41   
+744910 SPRINGFIELD/CHICOPEE: WESTOVER AFB           MA US  4212N 07232W    75   
+745060 ALAMEDA: NAS                                 CA US  3747N 12219W     4   
+745090 MOUNTAIN VIEW: MOFFET NAS                    CA US  3725N 12203W    12   
+745160 FAIRFIELD: TRAVIS AFB                        CA US  3816N 12156W    19   
+745700 DAYTON: WRIGHT-PATERSON AFB                  OH US  3950N 08403W   251   
+745940 CAMP SPRINGS: ANDREWS AFB                    MD US  3849N 07652W    86   
+745980 HAMPTON: LANGLEY AFB                         VA US  3705N 07622W     3   
+746710 FORT CAMPBELL: AAF                           KY US  3640N 08730W   174   
+746716 BOWLING GREEN                                KY US  3658N 08625W   167   
+746930 FAYETTEVILLE: FORT BRAGG                     NC US  3508N 07856W    74   
+747020 LEMOORE: REEVES NAS                          CA US  3620N 11957W    72   
+747188 BLYTHE                                       CA US  3337N 11443W   121   
+747300 SANDERSON                                    TX US  3010N 10225W   865   
+747320 ALAMOGORDO: HOLLOMAN AFB                     NM US  3251N 10606W  1248   
+747400 JUNCTION                                     TX US  3030N 09946W   522   
+747540 ALEXANDRIA: ENGLAND AFB                      LA US  3120N 09233W    27   
+747686 BILOXI: KEESLER AFB                          MS US  3025N 08855W    10   
+747750 PANAMA CITY: TYNDALL AFB                     FL US  3004N 08535W     5   
+747770 VALPARAISO: HURLBURT FIELD                   FL US  3026N 08641W    12   
+747810 VALDOSTA: MOODY AFB (722167)                 GA US  3058N 08312W    71   
+747900 SUMTER: SHAW AFB                             SC US  3358N 08028W    74   
+747910 MYRTLE BEACH: AFB                            SC US  3341N 07856W     8   
+747946 CAPE CANAVERAL:NASA SHUTTLE FCLTY (747945)   FL US  2837N 08043W     3   
+760013 TIJUANA (760011)                                MX  3233N 11658W   152   
+760053 MEXICALI (760051)                               MX  3238N 11700W    22   
+762580 CIUDAD OBREGON                                  MX  2729N 10956W    43   
+763820 TORREON (763825)                                MX  2534N 10325W  1130   
+763940 MONTERREY                                       MX  2552N 10014W   448   
+764055 LA PAZ                                          MX  2404N 11022W    21   
+764120 CULIACAN (764125)                               MX  2447N 10726W    33   
+764593 MAZATLAN (764591)                               MX  2310N 10616W    10   
+765493 TAMPICO (765491:765494)                         MX  2217N 09752W    24   
+765906 CANCUN (765905)                                 MX  2101N 08652W     5   
+766013 PUERTO VALLARTA (766010:766014)                 MX  2041N 10515W     6   
+766133 GUADALAJARA (766131:766123)                     MX  2040N 10323W  1551   
+766340 TULANCINGO (766342: 766343)                     MX  2005N 09822W  2181   
+766440 MERIDA                                          MX  2059N 08939W    10   
+766790 MEXICO CITY                                     MX  1926N 09905W  2234   
+766910 VERACRUZ                                        MX  1912N 09608W    14   
+767410 COATZACOALCOS (767810)                          MX  1809N 09425W    34   
+767433 VILLAHERMOSA (767441)                           MX  1801N 09257W    33   
+767500 CHETUMAL                                        MX  1830N 08818W    12   
+768056 ACAPULCO                                        MX  1646N 09945W     5   
+768430 TUXTLA GUTIERREZ                                MX  1645N 09307W   528   
+780160 HAMILTON: BERMUDA NAS                           BE  3222N 06441W     3   
+780730 NASSAU                                          BA  2503N 07728W     7   
+782240 HAVANA                                          CU  2259N 08224W    59   
+783670 GUANTANAMO                                      CU  1954N 07509W    17   
+783880 MONTEGO BAY                                     JM  1830N 07755W     3   
+783970 KINGSTON                                        JM  1756N 07647W     9   
+784860 SANTO DOMINGO                                   DR  1826N 06953W    14   
+785260 SAN JUAN                                        PU  1826N 06600W    19   
+785350 CIEBA: ROOSEVELT ROADS NAS                      PU  1815N 06538W    12   
+787080 SAN PEDRO SULA                                  HO  1527N 08756W    31   
+787200 TEGUCIGALPA                                     HO  1403N 08713W   994   
+787620 SAN JOSE                                        CS  1000N 08413W   931   
+787920 TOCUMEN                                         PM  0903N 07922W    11   
+788060 PANAMA                                          PM  0855N 07936W    16   
+789250 FORT-DE-FRANCE                                  MR  1436N 06100W     4   
+789540 BRIDGETOWN                                      BR  1304N 05929W    56   
+789700 PORT OF SPAIN                                   TD  1037N 06121W    15   
+789880 WILLEMSTAD                                      NU  1212N 06858W    67   
+800220 CARTAGENA                                       CO  1027N 07531W     1   
+800280 BARRANQUILLA                                    CO  1054N 07446W    10   
+802220 BOGOTA                                          CO  0442N 07408W  2548   
+802590 CALI                                            CO  0333N 07623W   969   
+804150 CARACAS                                         VN  1036N 06659W    48   
+812020 NICKERIE                                        SM  0557N 05702W     2   
+812250 PARAMARIBO                                      SM  0527N 05512W    15   
+820220 BOA VISTA                                       BZ  0250N 06042W   140   
+821110 MANAUS: EDUARDO GOMES INT'L                     BZ  0302S 06003W     2   
+821930 BELEM                                           BZ  0123S 04829W    16   
+822440 SANTAREM                                        BZ  0226S 05443W    72   
+822810 SAO LUIS                                        BZ  0236S 04414W    53   
+823320 MANAUS: PONTA PELADA                            BZ  0309S 05959W    84   
+823980 FORTALEZA                                       BZ  0347S 03832W    25   
+824000 ARCHIPELAGO DE FERNANDO DE NORONHA              BZ  0351S 03225W    56   
+825790 TERESINA                                        BZ  0503S 04249W    69   
+825990 NATAL                                           BZ  0555S 03515W    52   
+828240 PORTO VELHO                                     BZ  0846S 06355W    88   
+828990 RECIFE                                          BZ  0804S 03451W    19   
+829930 MACEIO                                          BZ  0931S 03547W   115   
+832480 SALVADOR                                        BZ  1254S 03820W     6   
+833780 BRASILIA                                        BZ  1552S 04756W  1061   
+834240 GOIANIA                                         BZ  1638S 04913W   747   
+834970 CARAVELAS                                       BZ  1738S 03915W     4   
+835760 UBERABA                                         BZ  1947S 04758W   807   
+836120 CAMPO GRANDE                                    BZ  2028S 05440W   556   
+836490 VITORIA                                         BZ  2016S 04017W     4   
+837210 CAMPINAS                                        BZ  2300S 04708W   661   
+837460 RIO DE JANEIRO: GALEAO                          BZ  2249S 04315W     6   
+837550 RIO DE JANEIRO: SANTOS DUMONT                   BZ  2254S 04310W     3   
+837680 LONDRINA                                        BZ  2320S 05108W   570   
+837800 SAO PAULO                                       BZ  2337S 04639W   803   
+838400 CURITIBA                                        BZ  2531S 04910W   908   
+838990 FLORIANOPOLIS                                   BZ  2740S 04833W     5   
+839710 PORTO ALEGRE                                    BZ  3000S 05111W     3   
+840710 QUITO                                           EQ  0009S 07829W  2812   
+842030 GUAYAQUIL                                       EQ  0209S 07953W     9   
+843770 IQUITOS                                         PR  0345S 07315W   126   
+843900 TALARA                                          PR  0434S 08115W    90   
+845150 PUCALLPA                                        PR  0825S 07436W   149   
+846280 LIMA                                            PR  1200S 07707W    13   
+846860 CUZCO                                           PR  1333S 07159W  3249   
+846910 PISCO                                           PR  1345S 07617W     7   
+847210 SAN JUAN                                        PR  1523S 07510W    60   
+847520 AREQUIPA                                        PR  1619S 07133W  2520   
+851540 TRINIDAD                                        BO  1451S 06457W   157   
+852010 LA PAZ                                          BO  1631S 06811W  4014   
+852230 COCHABAMBA                                      BO  1727S 06606W  2531   
+854060 ARICA                                           CH  1820S 07020W    59   
+854180 IQUIQUE                                         CH  2032S 07011W    52   
+854420 ANTOFAGASTA                                     CH  2326S 07026W   120   
+854690 EASTER ISLAND                                   CH  2709S 10925W    47   
+854880 LA SERENA                                       CH  2955S 07112W   146   
+855740 SANTIAGO                                        CH  3323S 07047W   476   
+856290 CURICO                                          CH  3458S 07114W   242   
+856820 CONCEPCION                                      CH  3646S 07303W    16   
+857430 TEMUCO                                          CH  3845S 07238W   120   
+857990 PUERTO MONTT                                    CH  4125S 07305W    86   
+858740 BALMACEDA                                       CH  4555S 07141W   524   
+859340 PUNTA ARENAS                                    CH  5300S 07051W    37   
+862180 ASUNCION                                        PY  2516S 05738W   101   
+863600 SALTO                                           UY  3123S 05757W    34   
+864600 PASO DE LOS TOROS                               UY  3248S 05631W    75   
+865000 TREINTA-Y-TRES                                  UY  3313S 05423W    46   
+865600 COLONIA DEL SACRAMENTO                          UY  3427S 05750W    23   
+865650 ROCHA                                           UY  3429S 05418W    18   
+865800 MONTEVIDEO                                      UY  3450S 05600W    32   
+870470 SALTA                                           AG  2451S 06529W  1216   
+871210 SAN MIGUEL DE TUCUMAN                           AG  2651S 06506W   450   
+871550 RESISTENCIA                                     AG  2727S 05903W    52   
+871620 FORMOSA                                         AG  2612S 05814W    60   
+871780 POSADAS                                         AG  2722S 05558W   125   
+872700 RECONQUISTA                                     AG  2911S 05940W    53   
+872890 PASO DE LOS LIBRES                              AG  2941S 05709W    70   
+873110 SAN JUAN                                        AG  3134S 06825W   598   
+873440 CORDOBA                                         AG  3119S 06413W   474   
+874180 MENDOZA                                         AG  3250S 06847W   704   
+874670 MARCOS JUAREZ                                   AG  3242S 06209W   114   
+874800 ROSARIO                                         AG  3255S 06047W    25   
+875480 JUNIN                                           AG  3433S 06057W    81   
+875760 BUENOS AIRES                                    AG  3449S 05832W    20   
+878600 COMODORO RIVADAVIA                              AG  4547S 06730W    46   
+879250 RIO GALLEGOS                                    AG  5137S 06917W    19   
+889680 SOUTH ORKNEY ISLANDS                            AG  6045S 04443W     6   
+910660 MIDWAY ISLAND: NAF                              US  2813N 17722W     4   
+911650 LIHUE                                        HI US  2159N 15921W    45   
+911760 KANEOHE: MCAS                                HI US  2127N 15746W     3   
+911780 EWA: BARBERS POINT NAS                       HI US  2119N 15804W    15   
+911820 HONOLULU                                     HI US  2121N 15756W     5   
+911860 MOLOKAI                                      HI US  2109N 15706W   137   
+911900 KAHULUI                                      HI US  2054N 15626W    20   
+912180 ANDERSEN AFB (GUAM)                             GM  1335N 14456E   185   
+912450 WAKE ISLAND                                     WK  1917N 16639E     4   
+912850 HILO                                         HI US  1943N 15504W    11   
+913340 MOEN ISLAND                                     KA  0728N 15151E     2   
+913660 KWAJALEIN ATOLL                                 MH  0844N 16744E     8   
+915540 LUGANVILLE                                      NH  1531S 16713E    44   
+915650 TANNA                                           NH  1932S 16915E    73   
+915920 NOUMEA                                          NC  2216S 16627E    72   
+916800 NADI                                            FJ  1745S 17727E    18   
+916830 NAUSORI                                         FJ  1803S 17834E     7   
+917530 WALLIS ISLANDS                                  FW  1314S 17610W    27   
+917650 PAGO PAGO                                       ZM  1420S 17043W     3   
+918430 RAROTONGA ISLAND                                KU  2112S 15949W     7   
+919380 TAHITI ISLAND                                   PF  1733S 14937W     2   
+919520 MORUROA ISLAND                                  PF  2149S 13848W     3   
+931190 AUCKLAND                                        NZ  3701S 17448E     6   
+934360 WELLINGTON (934340)                             NZ  4120S 17448E     7   
+937800 CHRISTCHURCH                                    NZ  4329S 17233E    34   
+938960 TAIAROA HEAD                                    NZ  4546S 17044E    76   
+941200 DARWIN                                          AU  1224S 13052E    30   
+942870 CAIRNS                                          AU  1653S 14545E     7   
+942940 TOWNSVILLE                                      AU  1915S 14645E     6   
+943020 LEARMONTH                                       AU  2214S 11405E     6   
+943120 PORT HEDLAND                                    AU  2022S 11837E     6   
+943260 ALICE SPRINGS                                   AU  2348S 13354E   541   
+945780 BRISBANE                                        AU  2723S 15306E     5   
+946100 PERTH                                           AU  3156S 11557E    29   
+946370 KALGOORLIE                                      AU  3046S 12127E   360   
+946720 ADELAIDE                                        AU  3456S 13831E     4   
+947670 SYDNEY                                          AU  3357S 15111E     3   
+948660 MELBOURNE                                       AU  3740S 14450E   141   
+949260 CANBERRA                                        AU  3518S 14911E   577   
+960350 MEDAN                                           ID  0334N 09841E    25   
+963150 BANDAR SERI BEGAWAN                             BF  0456N 11456E    15   
+964130 KUCHING                                         SK  0129N 11020E    27   
+964490 MIRI                                            SK  0420N 11359E    18   
+971800 UJANGPANDANG                                    ID  0504S 11933E    14   
+983270 ANGELES: CLARK AFB                              PH  1511N 12033E   196   
+983280 BAGUIO                                          PH  1625N 12036E  1501   
+984250 MANILA                                          PH  1435N 12059E    16   
+984260 OLONGAPO                                        PH  1448N 12016E    17   
+984290 MANILA: NINOY AQUINO INT'L ARPT                 PH  1431N 12100E    21   
+986460 CEBU/MANDAUE                                    PH  1018N 12358E    24   
+988360 ZAMBOANGA                                       PH  0654N 12204E     6   

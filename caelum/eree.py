@@ -18,6 +18,23 @@ WEATHER_DATA_PATH = os.environ['HOME'] + "/weather_data"
 SRC_PATH = os.path.dirname(os.path.abspath(__file__))
 
 DATA_EXTENTIONS = {'SWERA':'epw', \
+        'CSWD':'epw', \
+        'CWEC':'epw', \
+        'ETMY':'epw', \
+        'IGDG':'epw', \
+        'IMGW':'epw', \
+        'INETI':'epw', \
+        'ISHRAE':'epw', \
+        'ITMY':'epw', \
+        'IWEC':'epw', \
+        'KISR':'epw', \
+        'MSI':'epw', \
+        'NIWA':'epw', \
+        'RMY':'epw', \
+        'SWEC':'epw', \
+        'TMY':'epw', \
+        'TMY2':'epw', \
+        'TMY3':'epw', \
         'IWEC':'epw'}
 
 try:
@@ -36,7 +53,7 @@ def _muck_w_date(record):
     h_off = int(record['Hour']) //60 
     if h_off > 0:
         d += datetime.timedelta(hours=h_off )
-    d_off =  int(record['Hour'])//24
+    d_off = int(record['Hour'])//24
     if d_off > 0:
         d += datetime.timedelta(days=d_off)
     return d
@@ -62,7 +79,7 @@ def _station_info(station_code):
     for line in csv.DictReader(url_file):
         if line['station_code'] == station_code:
             return  line
-    raise Exception('Station not found')
+    raise KeyError('Station not found')
 
 
 def _basename(station_code):
