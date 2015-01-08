@@ -17,6 +17,9 @@ except ImportError:
 WEATHER_DATA_PATH = os.environ['HOME'] + "/weather_data"
 SRC_PATH = os.path.dirname(os.path.abspath(__file__))
 
+DATA_EXTENTIONS = {'SWERA':'epw', \
+        'IWEC':'epw'}
+
 try:
     os.listdir(WEATHER_DATA_PATH)
 except OSError:
@@ -24,6 +27,7 @@ except OSError:
         os.mkdir(WEATHER_DATA_PATH)
     except IOError:
         pass
+
 def _muck_w_date(record):
     """muck with the date because EPW starts counting from 1 and goes to 24"""
     d = datetime.datetime(int(record['Year']), int(record['Month']), \
@@ -60,7 +64,6 @@ def _station_info(station_code):
             return  line
     raise Exception('Station not found')
 
-DATA_EXTENTIONS = {'SWERA':'epw'}
 
 def _basename(station_code):
     "region, country, weather_station, station_code, data_format, url"
@@ -82,7 +85,7 @@ class EPWdata(object):
         except IOError:
             print("File not found")
             print("Downloading ...")
-            download(_eere_url(station_code), WEATHER_DATA_PATH, filename)
+            download(_eere_url(station_code))
             self.csvfile = open(filename)
         fieldnames = ["Year", "Month", "Day", "Hour", "Minute", "DS", \
                 "Drybulb (C)", "Dewpoint (C)", "Relative Humidity", \
@@ -111,6 +114,7 @@ class EPWdata(object):
 
 if __name__ == '__main__':
     SCODE = '418830'
+    SCODE = '063800'
     for trecord in EPWdata(SCODE):
         print(trecord['utc_datetime']),
         print(trecord['DNI (W/m^2)']),
