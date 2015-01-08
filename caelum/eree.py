@@ -112,8 +112,17 @@ class EPWdata(object):
                 "Wspd (m/s)", "Ts cover", "O sky cover", "CeilHgt (m)", \
                 "Present Weather", "Pw codes", "Pwat (cm)", "AOD (unitless)", \
                 "Snow Depth (cm)", "Days since snowfall"]
+        station_meta = self.csvfile.readline().split(',')
+        self.station_name = station_meta[1]
+        self.CC = station_meta[3]
+        self.station_fmt = station_meta[4]
+        self.station_code = station_meta[5]
+        self.lat = station_meta[6]
+        self.lon = station_meta[7]
+        self.TZ = float(station_meta[8])
+        self.ELEV = station_meta[9]
         dummy = ""
-        for _ in range(8):
+        for _ in range(7):
             dummy += self.csvfile.readline()
         self.epw_data = csv.DictReader(self.csvfile, fieldnames=fieldnames)
 
@@ -123,8 +132,11 @@ class EPWdata(object):
     def next(self):
         """generator handle"""
         record = self.epw_data.next()
-        record['utc_datetime'] = _muck_w_date(record)
+        local_time = _muck_w_date(record)
+        record['datetime'] = local_time
+        record['utc_datetime'] = local_time - datetime.timedelta(hours=self.TZ)
         return record
+        'LOCATION,BEEK,-,NLD,IWEC Data,063800,50.92,5.78,1.0,116.0'
 
     def __del__(self):
         self.csvfile.close()
