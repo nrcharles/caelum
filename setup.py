@@ -22,7 +22,7 @@ setup(
     packages=find_packages(),
     long_description=read('README.md'),
     install_requires=['geopy'],
-    package_data={'': ['*.csv']},
+    package_data={'': ['*.csv','*.txt']},
     test_suite='tests.unit',
     classifiers=[
         "Development Status :: 4 - Beta",
