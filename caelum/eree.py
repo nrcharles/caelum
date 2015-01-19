@@ -9,6 +9,8 @@ import csv
 import zipfile
 import tempfile
 import datetime
+import pytz
+
 try:
     from urllib.request import urlopen
 except ImportError:
@@ -49,13 +51,11 @@ def _muck_w_date(record):
     """muck with the date because EPW starts counting from 1 and goes to 24"""
     d = datetime.datetime(int(record['Year']), int(record['Month']), \
             int(record['Day']), int(record['Hour'])%24, \
-            int(record['Minute'])%60)
-    h_off = int(record['Hour']) //60 
-    if h_off > 0:
-        d += datetime.timedelta(hours=h_off )
-    d_off = int(record['Hour'])//24
+            int(record['Minute'])%60) #minute 60 is actually minute 0?
+    d_off = int(record['Hour'])//24  #hour 24 is actually hour 0
     if d_off > 0:
         d += datetime.timedelta(days=d_off)
+    #print d, '%s-%s-%s %s:%s' % (record['Year'], record['Month'],record['Day'],record['Hour'],record['Minute'])
     return d
 
 def download(url):
@@ -93,7 +93,7 @@ def _basename(station_code):
 
 class EPWdata(object):
     """EPW weather generator"""
-    def __init__(self, station_code):
+    def __init__(self, station_code, DST=True):
         #filename = path + usaf + 'TY.csv'
         filename = WEATHER_DATA_PATH + '/' + _basename(station_code)
         self.csvfile = None
@@ -121,6 +121,11 @@ class EPWdata(object):
         self.lon = station_meta[7]
         self.TZ = float(station_meta[8])
         self.ELEV = station_meta[9]
+        self.DST = DST
+
+        from geopy import geocoders
+        geocoder = geocoders.GoogleV3()
+        self.local_tz = pytz.timezone(geocoder.timezone((self.lat, self.lon)).zone)
         dummy = ""
         for _ in range(7):
             dummy += self.csvfile.readline()
@@ -134,7 +139,13 @@ class EPWdata(object):
         record = self.epw_data.next()
         local_time = _muck_w_date(record)
         record['datetime'] = local_time
-        record['utc_datetime'] = local_time - datetime.timedelta(hours=self.TZ)
+        #does this fix a specific data set or a general issue?
+        if self.DST:
+            localdt = self.local_tz.localize(record['datetime'])
+            record['utc_datetime'] = localdt.astimezone(pytz.UTC)
+        else:
+            record['utc_datetime'] = local_time - datetime.timedelta(hours=self.TZ)
+
         return record
         'LOCATION,BEEK,-,NLD,IWEC Data,063800,50.92,5.78,1.0,116.0'
 
@@ -143,8 +154,14 @@ class EPWdata(object):
 
 if __name__ == '__main__':
     SCODE = '418830'
-    SCODE = '063800'
-    for trecord in EPWdata(SCODE):
-        print(trecord['utc_datetime']),
-        print(trecord['DNI (W/m^2)']),
-        print(trecord['GHI (W/m^2)'])
+    STATION_CODE = '063800'
+    PLACE = (52.443371, 5.628186)
+    print sum([int(i['GHI (W/m^2)']) for i in EPWdata(STATION_CODE)])
+    print sum([int(i['GHI (W/m^2)']) for i in EPWdata(STATION_CODE,False)])
+    from solpy import irradiation
+    tr = 10
+    az = 180
+    print sum([irradiation.irradiation(record=rec, place=PLACE, horizon=None, t=tr, array_azimuth=az, model='p9') for rec in EPWdata(STATION_CODE)])/1000
+    print sum([irradiation.irradiation(record=rec, place=PLACE, horizon=None, t=tr, array_azimuth=az, model='p9') for rec in EPWdata(STATION_CODE,False)])/1000
+    #1053.51495024
+
