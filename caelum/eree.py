@@ -9,12 +9,14 @@ import csv
 import zipfile
 import tempfile
 import datetime
+from geopy import geocoders
 import pytz
+import re
 
-try:
-    from urllib.request import urlopen
-except ImportError:
-    from urllib import urlopen
+#try:
+#    from urllib.request import urlopen
+#except ImportError:
+import urllib2
 
 WEATHER_DATA_PATH = os.environ['HOME'] + "/weather_data"
 SRC_PATH = os.path.dirname(os.path.abspath(__file__))
@@ -37,7 +39,9 @@ DATA_EXTENTIONS = {'SWERA':'epw', \
         'TMY':'epw', \
         'TMY2':'epw', \
         'TMY3':'epw', \
-        'IWEC':'epw'}
+        'IWEC':'epw', \
+        'stat':'stat', \
+        'ddy':'ddy'}
 
 try:
     os.listdir(WEATHER_DATA_PATH)
@@ -49,21 +53,27 @@ except OSError:
 
 def _muck_w_date(record):
     """muck with the date because EPW starts counting from 1 and goes to 24"""
-    d = datetime.datetime(int(record['Year']), int(record['Month']), \
+    temp_d = datetime.datetime(int(record['Year']), int(record['Month']), \
             int(record['Day']), int(record['Hour'])%24, \
             int(record['Minute'])%60) #minute 60 is actually minute 0?
     d_off = int(record['Hour'])//24  #hour 24 is actually hour 0
     if d_off > 0:
-        d += datetime.timedelta(days=d_off)
-    #print d, '%s-%s-%s %s:%s' % (record['Year'], record['Month'],record['Day'],record['Hour'],record['Minute'])
-    return d
+        temp_d += datetime.timedelta(days=d_off)
+    #print d, '%s-%s-%s %s:%s' % (record['Year'], record['Month'], \
+    #record['Day'],record['Hour'],record['Minute'])
+    return temp_d
 
 def download(url):
     """download TMY3 file"""
-    data_handle = urlopen(url)
+    print("Downloading %s" % url)
+    request = urllib2.Request(url)
+    request.add_header('User-Agent', \
+            'caelum/0.1 +https://github.com/nrcharles/caelum')
+    #data_handle = urlopen(url)
+    opener = urllib2.build_opener()
     with tempfile.TemporaryFile(suffix='.zip', dir=WEATHER_DATA_PATH) \
             as local_file:
-        local_file.write(data_handle.read())
+        local_file.write(opener.open(request).read())
         compressed_file = zipfile.ZipFile(local_file, 'r')
         compressed_file.extractall(WEATHER_DATA_PATH)
         local_file.close()
@@ -82,30 +92,99 @@ def _station_info(station_code):
     raise KeyError('Station not found')
 
 
-def _basename(station_code):
+def _basename(station_code, fmt=None):
     "region, country, weather_station, station_code, data_format, url"
     info = _station_info(station_code)
-    basename = '%s_%s.%s_%s.%s' % (info['country'], \
-            info['weather_station'],\
-            info['station_code'], info['data_format'], \
-            DATA_EXTENTIONS[info['data_format']])
+    if not fmt:
+        fmt = info['data_format']
+    basename = '%s.%s' % (info['url'].rsplit('/', 1)[1].rsplit('.', 1)[0], \
+            DATA_EXTENTIONS[fmt])
+    print basename
     return basename
+
+def twopercent(station_code):
+    """two percent Temperature"""
+    #(DB=>MWB) 2%, MaxDB=
+    temp = None
+    try:
+        fin = open('%s/%s' % (WEATHER_DATA_PATH, \
+                _basename(station_code, 'ddy')))
+        for line in fin:
+            value = re.search("""2%, MaxDB=(\\d+\\.\\d*)""", line)
+            if value:
+                temp = float(value.groups()[0])
+    except IOError:
+        pass
+
+    if not temp:
+        #(DB=>MWB) 2%, MaxDB=
+        try:
+            fin = open('%s/%s' % (WEATHER_DATA_PATH, \
+                    _basename(station_code, 'stat')))
+            flag = 0
+            tdata = []
+            for line in fin:
+                if line.find('2%') is not -1:
+                    flag = 3
+                if flag > 0:
+                    tdata.append(line.split('\t'))
+                    flag -= 1
+            temp = float(tdata[2][5].strip())
+        except IOError:
+            pass
+    if temp:
+        return temp
+    else:
+        print "Warning: 2% High Temperature not found, using worst case"
+        return 38.0
+
+def minimum(station_code):
+    """minimum temperature"""
+    #(DB=>MWB) 2%, MaxDB=
+    temp = None
+    fin = None
+    try:
+        fin = open('%s/%s' % (WEATHER_DATA_PATH, \
+                _basename(station_code, 'ddy')))
+    except IOError:
+        print "File not found"
+        print "Downloading ..."
+        download(_eere_url(station_code))
+        fin = open('%s/%s' % (WEATHER_DATA_PATH, \
+                _basename(station_code, 'ddy')))
+    for line in fin:
+        value = re.search('Max Drybulb=(-?\\d+\\.\\d*)', line)
+        if value:
+            temp = float(value.groups()[0])
+    if not temp:
+        try:
+            fin = open('%s/%s' % (WEATHER_DATA_PATH, \
+                    _basename(station_code, 'stat')))
+            for line in fin:
+                if line.find('Minimum Dry Bulb') is not -1:
+                    return float(line[37:-1].split('\xb0')[0])
+        except IOError:
+            pass
+    if temp:
+        return temp
+    else:
+        print "Warning: Minimum Temperature not found, using worst case"
+        return -23.0
 
 class EPWdata(object):
     """EPW weather generator"""
-    def __init__(self, station_code, DST=True):
-        #filename = path + usaf + 'TY.csv'
+    def __init__(self, station_code, DST=False):
+        #filename = path + station_code + 'TY.csv'
         filename = WEATHER_DATA_PATH + '/' + _basename(station_code)
         self.csvfile = None
         try:
             self.csvfile = open(filename)
         except IOError:
             print("File not found")
-            print("Downloading ...")
             download(_eere_url(station_code))
             self.csvfile = open(filename)
         fieldnames = ["Year", "Month", "Day", "Hour", "Minute", "DS", \
-                "Drybulb (C)", "Dewpoint (C)", "Relative Humidity", \
+                "Dry-bulb (C)", "Dewpoint (C)", "Relative Humidity", \
                 "Pressure (Pa)", "ETR (W/m^2)", "ETRN (W/m^2)", "HIR (W/m^2)", \
                 "GHI (W/m^2)", "DNI (W/m^2)", "DHI (W/m^2)", "GHIL (lux)", \
                 "DNIL (lux)", "DFIL (lux)", "Zlum (Cd/m2)", "Wdir (degrees)", \
@@ -123,9 +202,10 @@ class EPWdata(object):
         self.ELEV = station_meta[9]
         self.DST = DST
 
-        from geopy import geocoders
-        geocoder = geocoders.GoogleV3()
-        self.local_tz = pytz.timezone(geocoder.timezone((self.lat, self.lon)).zone)
+        if self.DST:
+            geocoder = geocoders.GoogleV3()
+            self.local_tz = pytz.timezone(\
+                    geocoder.timezone((self.lat, self.lon)).zone)
         dummy = ""
         for _ in range(7):
             dummy += self.csvfile.readline()
@@ -144,10 +224,11 @@ class EPWdata(object):
             localdt = self.local_tz.localize(record['datetime'])
             record['utc_datetime'] = localdt.astimezone(pytz.UTC)
         else:
-            record['utc_datetime'] = local_time - datetime.timedelta(hours=self.TZ)
+            record['utc_datetime'] = \
+                    local_time - datetime.timedelta(hours=self.TZ)
 
         return record
-        'LOCATION,BEEK,-,NLD,IWEC Data,063800,50.92,5.78,1.0,116.0'
+        #'LOCATION,BEEK,-,NLD,IWEC Data,063800,50.92,5.78,1.0,116.0'
 
     def __del__(self):
         self.csvfile.close()
@@ -157,11 +238,10 @@ if __name__ == '__main__':
     STATION_CODE = '063800'
     PLACE = (52.443371, 5.628186)
     print sum([int(i['GHI (W/m^2)']) for i in EPWdata(STATION_CODE)])
-    print sum([int(i['GHI (W/m^2)']) for i in EPWdata(STATION_CODE,False)])
+    print sum([int(i['GHI (W/m^2)']) for i in EPWdata(STATION_CODE, False)])
     from solpy import irradiation
     tr = 10
     az = 180
-    print sum([irradiation.irradiation(record=rec, place=PLACE, horizon=None, t=tr, array_azimuth=az, model='p9') for rec in EPWdata(STATION_CODE)])/1000
-    print sum([irradiation.irradiation(record=rec, place=PLACE, horizon=None, t=tr, array_azimuth=az, model='p9') for rec in EPWdata(STATION_CODE,False)])/1000
-    #1053.51495024
-
+    print sum([irradiation.irradiation(record=rec, place=PLACE, horizon=None, \
+            t=tr, array_azimuth=az, model='p9') \
+            for rec in EPWdata(STATION_CODE)])/1000
