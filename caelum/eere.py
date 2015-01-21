@@ -195,6 +195,7 @@ class EPWdata(object):
     """
     def __init__(self, station_code, DST=False):
         """Data for a weather station
+
         Args:
             station_code (str): Station code of weather station
             DST (bool): Weather timestands in daylight savings. Default False
