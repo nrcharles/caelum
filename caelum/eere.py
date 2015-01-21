@@ -2,7 +2,13 @@
 # Copyright (C) 2013 Nathan Charles
 #
 # This program is free software. See terms in LICENSE file.
-"""Global EERE Weather Data Sources"""
+"""Global EERE Weather Data Sources wrapper
+
+Example:
+    Annual GHI for STATION_CODE in Watts
+    >>> sum([int(i['GHI (W/m^2)']) for i in EPWdata(STATION_CODE)])
+
+"""
 
 import os
 import csv
@@ -13,9 +19,6 @@ from geopy import geocoders
 import pytz
 import re
 
-#try:
-#    from urllib.request import urlopen
-#except ImportError:
 import urllib2
 
 WEATHER_DATA_PATH = os.environ['HOME'] + "/weather_data"
@@ -64,12 +67,11 @@ def _muck_w_date(record):
     return temp_d
 
 def download(url):
-    """download TMY3 file"""
+    """download and extract file"""
     print("Downloading %s" % url)
     request = urllib2.Request(url)
     request.add_header('User-Agent', \
             'caelum/0.1 +https://github.com/nrcharles/caelum')
-    #data_handle = urlopen(url)
     opener = urllib2.build_opener()
     with tempfile.TemporaryFile(suffix='.zip', dir=WEATHER_DATA_PATH) \
             as local_file:
@@ -85,7 +87,7 @@ def _eere_url(station_code):
 
 def _station_info(station_code):
     """filename based meta data for a station code"""
-    url_file = open(SRC_PATH + '/eree.csv')
+    url_file = open(SRC_PATH + '/eere.csv')
     for line in csv.DictReader(url_file):
         if line['station_code'] == station_code:
             return  line
@@ -103,7 +105,15 @@ def _basename(station_code, fmt=None):
     return basename
 
 def twopercent(station_code):
-    """two percent Temperature"""
+    """Two percent high design temperature for a location.
+    Degrees in Celcius
+
+    Args:
+        station_code (str): Weather Station Code
+
+    Returns:
+        float degrees Celcius
+    """
     #(DB=>MWB) 2%, MaxDB=
     temp = None
     try:
@@ -135,12 +145,18 @@ def twopercent(station_code):
     if temp:
         return temp
     else:
-        print "Warning: 2% High Temperature not found, using worst case"
-        return 38.0
+        raise Exception("Error: 2% High Temperature not found")
 
 def minimum(station_code):
-    """minimum temperature"""
-    #(DB=>MWB) 2%, MaxDB=
+    """Extream Minimum Design Temperature for a location.
+    Degrees in Celcius
+
+    Args:
+        station_code (str): Weather Station Code
+
+    Returns:
+        float degrees Celcius
+    """
     temp = None
     fin = None
     try:
@@ -148,7 +164,6 @@ def minimum(station_code):
                 _basename(station_code, 'ddy')))
     except IOError:
         print "File not found"
-        print "Downloading ..."
         download(_eere_url(station_code))
         fin = open('%s/%s' % (WEATHER_DATA_PATH, \
                 _basename(station_code, 'ddy')))
@@ -168,13 +183,22 @@ def minimum(station_code):
     if temp:
         return temp
     else:
-        print "Warning: Minimum Temperature not found, using worst case"
-        return -23.0
+        raise Exception("Error: Minimum Temperature not found")
 
 class EPWdata(object):
-    """EPW weather generator"""
+    """EPW weather generator
+
+    Attributes:
+        lat (float): latitude in degrees
+        lon (float): lonitude in degrees
+
+    """
     def __init__(self, station_code, DST=False):
-        #filename = path + station_code + 'TY.csv'
+        """Data for a weather station
+        Args:
+            station_code (str): Station code of weather station
+            DST (bool): Weather timestands in daylight savings. Default False
+        """
         filename = WEATHER_DATA_PATH + '/' + _basename(station_code)
         self.csvfile = None
         try:
@@ -215,7 +239,11 @@ class EPWdata(object):
         return self
 
     def next(self):
-        """generator handle"""
+        """Weather data record
+
+        Yields:
+            dict
+        """
         record = self.epw_data.next()
         local_time = _muck_w_date(record)
         record['datetime'] = local_time
@@ -231,6 +259,7 @@ class EPWdata(object):
         #'LOCATION,BEEK,-,NLD,IWEC Data,063800,50.92,5.78,1.0,116.0'
 
     def __del__(self):
+        """clean up open files"""
         self.csvfile.close()
 
 if __name__ == '__main__':
@@ -239,9 +268,9 @@ if __name__ == '__main__':
     PLACE = (52.443371, 5.628186)
     print sum([int(i['GHI (W/m^2)']) for i in EPWdata(STATION_CODE)])
     print sum([int(i['GHI (W/m^2)']) for i in EPWdata(STATION_CODE, False)])
-    from solpy import irradiation
-    tr = 10
-    az = 180
-    print sum([irradiation.irradiation(record=rec, place=PLACE, horizon=None, \
-            t=tr, array_azimuth=az, model='p9') \
-            for rec in EPWdata(STATION_CODE)])/1000
+    #from solpy import irradiation
+    #tr = 10
+    #az = 180
+    #print sum([irradiation.irradiation(record=rec, place=PLACE, horizon=None, \
+    #        t=tr, array_azimuth=az, model='p9') \
+    #        for rec in EPWdata(STATION_CODE)])/1000
