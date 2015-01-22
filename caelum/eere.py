@@ -4,9 +4,18 @@
 # This program is free software. See terms in LICENSE file.
 """Global EERE Weather Data Sources wrapper
 
-Example:
+Examples:
     Annual GHI for STATION_CODE in Watts
-    >>> sum([int(i['GHI (W/m^2)']) for i in EPWdata(STATION_CODE)])
+    >>> sum([int(i['GHI (W/m^2)']) for i in EPWdata('418830')])
+    1741512
+
+    Minimum Design Temperature
+    >>> minimum('418830')
+    8.8
+
+    2% Max Design Temperature
+    >>> twopercent('418830')
+    34.3
 
 """
 
@@ -101,7 +110,6 @@ def _basename(station_code, fmt=None):
         fmt = info['data_format']
     basename = '%s.%s' % (info['url'].rsplit('/', 1)[1].rsplit('.', 1)[0], \
             DATA_EXTENTIONS[fmt])
-    print basename
     return basename
 
 def twopercent(station_code):
@@ -264,14 +272,5 @@ class EPWdata(object):
         self.csvfile.close()
 
 if __name__ == '__main__':
-    SCODE = '418830'
-    STATION_CODE = '063800'
-    PLACE = (52.443371, 5.628186)
-    print sum([int(i['GHI (W/m^2)']) for i in EPWdata(STATION_CODE)])
-    print sum([int(i['GHI (W/m^2)']) for i in EPWdata(STATION_CODE, False)])
-    #from solpy import irradiation
-    #tr = 10
-    #az = 180
-    #print sum([irradiation.irradiation(record=rec, place=PLACE, horizon=None, \
-    #        t=tr, array_azimuth=az, model='p9') \
-    #        for rec in EPWdata(STATION_CODE)])/1000
+    import doctest
+    doctest.testmod()
