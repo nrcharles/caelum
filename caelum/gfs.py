@@ -95,14 +95,15 @@ def pgrb2(closest, offset):
     return 'gfs.t%02dz.pgrb2.1p00.f%03d' % (closest, offset)
 
 
-def get(timestamp, dataset, products=None, levels=None, offset=0):
+def download(timestamp, dataset, products=None, levels=None, offset=0):
     """saves GFS grib file to DATA_PATH
 
     Args:
-        dataset(function): naming convention function.  eg. _sflux
+        dataset(function): naming convention function.  eg. pgrb2
         timestamp(datetime): ???
-        offset(int): multiple of 3
-
+        products(list): TMP, etc. if None downloads all.
+        layers(list): surface, etc. if None downloads all.
+        offset(int): should be multiple of 3
     """
     closest = timestamp.hour//6*6
     filename = dataset(closest, offset)
@@ -138,4 +139,4 @@ if __name__ == '__main__':
               'low cloud layer', '1 hybrid level']
 
     for j in range(5):
-        get(START, sflux, PRODUCTS, LEVELS, j*3)
+        download(START, sflux, PRODUCTS, LEVELS, j*3)
