@@ -2,7 +2,7 @@
 
 Example:
     Download latest to ~/gfs/[GFS TIMESTAMP]
-    >>> gfs.get(datetime.datetime.now(),gfs.pgrb2)
+    >>> gfs.download(datetime.datetime.now(),gfs.pgrb2)
 
 """
 # Copyright (C) 2015 Nathan Charles
@@ -95,16 +95,20 @@ def pgrb2(closest, offset):
     return 'gfs.t%02dz.pgrb2.1p00.f%03d' % (closest, offset)
 
 
-def download(timestamp, dataset, products=None, levels=None, offset=0):
+def download(timestamp, dataset, path=None, products=None,
+             levels=None, offset=0):
     """saves GFS grib file to DATA_PATH
 
     Args:
         dataset(function): naming convention function.  eg. pgrb2
         timestamp(datetime): ???
+        path(str): if None defaults to DATA_PATH
         products(list): TMP, etc. if None downloads all.
         layers(list): surface, etc. if None downloads all.
         offset(int): should be multiple of 3
     """
+    if path is None:
+        path = DATA_PATH
     closest = timestamp.hour//6*6
     filename = dataset(closest, offset)
     gfs_timestamp = '%s%02d' % (timestamp.strftime('%Y%m%d'), closest)
@@ -113,8 +117,8 @@ def download(timestamp, dataset, products=None, levels=None, offset=0):
     index = url + '.idx'
     messages = message_index(index)
     segments = _filter_messages(messages, products, levels)
-    path = DATA_PATH + '/%s/' % gfs_timestamp
-    _verify_path(path)
+    dl_path = path + '/%s/' % gfs_timestamp
+    _verify_path(dl_path)
     _download_segments(path + filename, url, segments)
 
 
@@ -139,4 +143,4 @@ if __name__ == '__main__':
               'low cloud layer', '1 hybrid level']
 
     for j in range(5):
-        download(START, sflux, PRODUCTS, LEVELS, j*3)
+        download(START, sflux, products=PRODUCTS, levels=LEVELS, offset=j*3)
