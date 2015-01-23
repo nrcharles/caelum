@@ -1,4 +1,7 @@
 """Download GFS grib2 files."""
+# Copyright (C) 2015 Nathan Charles
+#
+# This program is free software. See terms in LICENSE file.
 
 import urllib2
 import datetime
@@ -18,7 +21,7 @@ def _verify_path(path):
 _verify_path(DATA_PATH)
 
 
-def _baseurl(gfs_timestamp, filename):
+def baseurl(gfs_timestamp, filename):
     """build url url"""
     url = 'http://nomads.ncep.noaa.gov/pub/data/nccf/com/gfs/prod/gfs.%s/'\
           '%s' % (gfs_timestamp, filename)
@@ -75,9 +78,15 @@ def _download_segments(filename, url, segments):
     gribfile.close()
 
 
-def _sflux(closest, offset):
+def sflux(closest, offset):
     """sflux dataset naming convention"""
     return 'gfs.t%02dz.sfluxgrbf%02d.grib2' % (closest, offset)
+
+
+def pgrb2(closest, offset):
+    """pgrb2 1 degree dataset naming convention"""
+    # gfs.t12z.pgrb2.1p00.f000
+    return 'gfs.t%02dz.pgrb2.1p00.f%03d' % (closest, offset)
 
 
 def get(timestamp, dataset, products=None, levels=None, offset=0):
@@ -93,7 +102,7 @@ def get(timestamp, dataset, products=None, levels=None, offset=0):
     filename = dataset(closest, offset)
     gfs_timestamp = '%s%02d' % (timestamp.strftime('%Y%m%d'), closest)
 
-    url = _baseurl(gfs_timestamp, filename)
+    url = baseurl(gfs_timestamp, filename)
     index = url + '.idx'
     messages = message_index(index)
     segments = _filter_messages(messages, products, levels)
@@ -123,4 +132,4 @@ if __name__ == '__main__':
               'low cloud layer', '1 hybrid level']
 
     for j in range(5):
-        get(START, _sflux, PRODUCTS, LEVELS, j*3)
+        get(START, sflux, PRODUCTS, LEVELS, j*3)
