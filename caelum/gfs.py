@@ -1,4 +1,10 @@
-"""Download GFS grib2 files."""
+"""Download GFS grib2 files.
+
+Example:
+    Download latest to ~/gfs/[GFS TIMESTAMP]
+    >>> gfs.get(datetime.datetime.now(),gfs.pgrb2)
+
+"""
 # Copyright (C) 2015 Nathan Charles
 #
 # This program is free software. See terms in LICENSE file.
