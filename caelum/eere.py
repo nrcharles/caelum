@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-# Copyright (C) 2013 Nathan Charles
+# Copyright (C) 2015 Nathan Charles
 #
 # This program is free software. See terms in LICENSE file.
 """Global EERE Weather Data Sources wrapper
