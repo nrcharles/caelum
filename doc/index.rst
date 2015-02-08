@@ -23,7 +23,7 @@ Calculate total annual GHI in kWh.
 
     from caelum import eere
     weather_station = '418830'
-    sum([int(i['GHI (W/m^2)']) for i in EPWdata(weather_station)])/1000.
+    sum([int(i['GHI (W/m^2)']) for i in eere.EPWdata(weather_station)])/1000.
 
 
 Source code for caelum is on `github <https://github.com/nrcharles/caelum>`_
