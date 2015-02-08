@@ -1,0 +1,176 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>EERE &mdash; caelum 0.2 documentation</title>
+    
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.2',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="top" title="caelum 0.2 documentation" href="index.html" />
+    <link rel="next" title="GFS" href="gfs.html" />
+    <link rel="prev" title="Welcome to caelum’s documentation!" href="index.html" />
+   
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9">
+
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="gfs.html" title="GFS"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="index.html" title="Welcome to caelum’s documentation!"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">caelum 0.2 documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="module-caelum.eere">
+<span id="eere"></span><h1>EERE<a class="headerlink" href="#module-caelum.eere" title="Permalink to this headline">¶</a></h1>
+<p>Global EERE Weather Data Sources wrapper</p>
+<dl class="docutils">
+<dt>Examples:</dt>
+<dd><p class="first">Annual GHI for STATION_CODE in Watts
+&gt;&gt;&gt; sum([int(i[&#8216;GHI (W/m^2)&#8217;]) for i in EPWdata(&#8216;418830&#8217;)])
+1741512</p>
+<p>Minimum Design Temperature
+&gt;&gt;&gt; minimum(&#8216;418830&#8217;)
+8.8</p>
+<p class="last">2% Max Design Temperature
+&gt;&gt;&gt; twopercent(&#8216;418830&#8217;)
+34.3</p>
+</dd>
+</dl>
+<dl class="class">
+<dt id="caelum.eere.EPWdata">
+<em class="property">class </em><tt class="descclassname">caelum.eere.</tt><tt class="descname">EPWdata</tt><big>(</big><em>station_code</em>, <em>DST=False</em><big>)</big><a class="headerlink" href="#caelum.eere.EPWdata" title="Permalink to this definition">¶</a></dt>
+<dd><p>EPW weather generator</p>
+<dl class="docutils">
+<dt>Attributes:</dt>
+<dd>lat (float): latitude in degrees
+lon (float): lonitude in degrees</dd>
+</dl>
+<dl class="method">
+<dt id="caelum.eere.EPWdata.next">
+<tt class="descname">next</tt><big>(</big><big>)</big><a class="headerlink" href="#caelum.eere.EPWdata.next" title="Permalink to this definition">¶</a></dt>
+<dd><p>Weather data record</p>
+<dl class="docutils">
+<dt>Yields:</dt>
+<dd>dict</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="function">
+<dt id="caelum.eere.download">
+<tt class="descclassname">caelum.eere.</tt><tt class="descname">download</tt><big>(</big><em>url</em><big>)</big><a class="headerlink" href="#caelum.eere.download" title="Permalink to this definition">¶</a></dt>
+<dd><p>download and extract file</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="caelum.eere.minimum">
+<tt class="descclassname">caelum.eere.</tt><tt class="descname">minimum</tt><big>(</big><em>station_code</em><big>)</big><a class="headerlink" href="#caelum.eere.minimum" title="Permalink to this definition">¶</a></dt>
+<dd><p>Extream Minimum Design Temperature for a location.
+Degrees in Celcius</p>
+<dl class="docutils">
+<dt>Args:</dt>
+<dd>station_code (str): Weather Station Code</dd>
+<dt>Returns:</dt>
+<dd>float degrees Celcius</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="caelum.eere.twopercent">
+<tt class="descclassname">caelum.eere.</tt><tt class="descname">twopercent</tt><big>(</big><em>station_code</em><big>)</big><a class="headerlink" href="#caelum.eere.twopercent" title="Permalink to this definition">¶</a></dt>
+<dd><p>Two percent high design temperature for a location.
+Degrees in Celcius</p>
+<dl class="docutils">
+<dt>Args:</dt>
+<dd>station_code (str): Weather Station Code</dd>
+<dt>Returns:</dt>
+<dd>float degrees Celcius</dd>
+</dl>
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script><h3>Navigation</h3>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="">EERE</a></li>
+<li class="toctree-l1"><a class="reference internal" href="gfs.html">GFS</a></li>
+</ul>
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2015, Nathan Charles.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.2.3</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster </a>
+      
+      |
+      <a href="_sources/eere.txt"
+          rel="nofollow">Page source</a></li>
+    </div>
+
+    
+
+    
+  </body>
+</html>

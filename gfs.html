@@ -1,0 +1,157 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>GFS &mdash; caelum 0.2 documentation</title>
+    
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.2',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="top" title="caelum 0.2 documentation" href="index.html" />
+    <link rel="prev" title="EERE" href="eere.html" />
+   
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9">
+
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="eere.html" title="EERE"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">caelum 0.2 documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="module-caelum.gfs">
+<span id="gfs"></span><h1>GFS<a class="headerlink" href="#module-caelum.gfs" title="Permalink to this headline">¶</a></h1>
+<p>Download GFS grib2 files.</p>
+<dl class="docutils">
+<dt>Example:</dt>
+<dd>Download latest to ~/gfs/[GFS TIMESTAMP]
+&gt;&gt;&gt; gfs.download(datetime.datetime.now(),gfs.pgrb2)</dd>
+</dl>
+<dl class="function">
+<dt id="caelum.gfs.baseurl">
+<tt class="descclassname">caelum.gfs.</tt><tt class="descname">baseurl</tt><big>(</big><em>gfs_timestamp</em>, <em>filename</em><big>)</big><a class="headerlink" href="#caelum.gfs.baseurl" title="Permalink to this definition">¶</a></dt>
+<dd><p>build url url</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="caelum.gfs.download">
+<tt class="descclassname">caelum.gfs.</tt><tt class="descname">download</tt><big>(</big><em>timestamp</em>, <em>dataset</em>, <em>path=None</em>, <em>products=None</em>, <em>levels=None</em>, <em>offset=0</em><big>)</big><a class="headerlink" href="#caelum.gfs.download" title="Permalink to this definition">¶</a></dt>
+<dd><p>saves GFS grib file to DATA_PATH</p>
+<dl class="docutils">
+<dt>Args:</dt>
+<dd>dataset(function): naming convention function.  eg. pgrb2
+timestamp(datetime): ???
+path(str): if None defaults to DATA_PATH
+products(list): TMP, etc. if None downloads all.
+layers(list): surface, etc. if None downloads all.
+offset(int): should be multiple of 3</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="caelum.gfs.message_index">
+<tt class="descclassname">caelum.gfs.</tt><tt class="descname">message_index</tt><big>(</big><em>index_url</em><big>)</big><a class="headerlink" href="#caelum.gfs.message_index" title="Permalink to this definition">¶</a></dt>
+<dd><p>get message index of components for urllib2
+Args:</p>
+<blockquote>
+<div>url(string):</div></blockquote>
+<dl class="docutils">
+<dt>Returns:</dt>
+<dd>list: messages</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="caelum.gfs.pgrb2">
+<tt class="descclassname">caelum.gfs.</tt><tt class="descname">pgrb2</tt><big>(</big><em>closest</em>, <em>offset</em><big>)</big><a class="headerlink" href="#caelum.gfs.pgrb2" title="Permalink to this definition">¶</a></dt>
+<dd><p>pgrb2 1 degree dataset naming convention</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="caelum.gfs.sflux">
+<tt class="descclassname">caelum.gfs.</tt><tt class="descname">sflux</tt><big>(</big><em>closest</em>, <em>offset</em><big>)</big><a class="headerlink" href="#caelum.gfs.sflux" title="Permalink to this definition">¶</a></dt>
+<dd><p>sflux dataset naming convention</p>
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script><h3>Navigation</h3>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="eere.html">EERE</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">GFS</a></li>
+</ul>
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2015, Nathan Charles.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.2.3</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster </a>
+      
+      |
+      <a href="_sources/gfs.txt"
+          rel="nofollow">Page source</a></li>
+    </div>
+
+    
+
+    
+  </body>
+</html>
