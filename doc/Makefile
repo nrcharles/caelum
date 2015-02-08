@@ -62,7 +62,6 @@ gh-pages:
 	git reset HEAD
 	make html
 	mv -fv build/html/* ../
-	rm -rf $(GH_PAGES_SOURCES) build
 
 dirhtml:
 	$(SPHINXBUILD) -b dirhtml $(ALLSPHINXOPTS) $(BUILDDIR)/dirhtml
