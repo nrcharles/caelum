@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Welcome to caelum’s documentation! &mdash; caelum 0.2 documentation</title>
+    <title>Welcome to caelum! &mdash; caelum 0.2 documentation</title>
     
     <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -53,14 +53,29 @@
         <div class="bodywrapper">
           <div class="body">
             
-  <div class="section" id="welcome-to-caelum-s-documentation">
-<h1>Welcome to caelum&#8217;s documentation!<a class="headerlink" href="#welcome-to-caelum-s-documentation" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="welcome-to-caelum">
+<h1>Welcome to caelum!<a class="headerlink" href="#welcome-to-caelum" title="Permalink to this headline">¶</a></h1>
+<p>caelum is a python interface to various weather sources including NOAA GFS and EREE.</p>
+<div class="section" id="quickstart">
+<h2>Quickstart<a class="headerlink" href="#quickstart" title="Permalink to this headline">¶</a></h2>
+<p>Install caelum via pip.</p>
+<div class="highlight-shell"><div class="highlight"><pre>pip install caelum
+</pre></div>
+</div>
+<p>Calculate total annual GHI in kWh.</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">caelum</span> <span class="kn">import</span> <span class="n">eere</span>
+<span class="n">weather_station</span> <span class="o">=</span> <span class="s">&#39;418830&#39;</span>
+<span class="nb">sum</span><span class="p">([</span><span class="nb">int</span><span class="p">(</span><span class="n">i</span><span class="p">[</span><span class="s">&#39;GHI (W/m^2)&#39;</span><span class="p">])</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">EPWdata</span><span class="p">(</span><span class="n">weather_station</span><span class="p">)])</span><span class="o">/</span><span class="mf">1000.</span>
+</pre></div>
+</div>
+<p>Source code for caelum is on <a class="reference external" href="https://github.com/nrcharles/caelum">github</a></p>
 <p>Contents:</p>
 <div class="toctree-wrapper compound">
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="eere.html">EERE</a></li>
 <li class="toctree-l1"><a class="reference internal" href="gfs.html">GFS</a></li>
 </ul>
+</div>
 </div>
 </div>
 <div class="section" id="indices-and-tables">
