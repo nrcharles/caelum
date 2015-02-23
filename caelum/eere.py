@@ -2,7 +2,7 @@
 # Copyright (C) 2015 Nathan Charles
 #
 # This program is free software. See terms in LICENSE file.
-"""Global EERE Weather Data Sources wrapper
+"""Global EERE Weather Data Sources wrapper.
 
 Examples:
     Annual GHI for STATION_CODE in Watts
@@ -33,27 +33,27 @@ import urllib2
 WEATHER_DATA_PATH = os.environ['HOME'] + "/weather_data"
 SRC_PATH = os.path.dirname(os.path.abspath(__file__))
 
-DATA_EXTENTIONS = {'SWERA':'epw', \
-        'CSWD':'epw', \
-        'CWEC':'epw', \
-        'ETMY':'epw', \
-        'IGDG':'epw', \
-        'IMGW':'epw', \
-        'INETI':'epw', \
-        'ISHRAE':'epw', \
-        'ITMY':'epw', \
-        'IWEC':'epw', \
-        'KISR':'epw', \
-        'MSI':'epw', \
-        'NIWA':'epw', \
-        'RMY':'epw', \
-        'SWEC':'epw', \
-        'TMY':'epw', \
-        'TMY2':'epw', \
-        'TMY3':'epw', \
-        'IWEC':'epw', \
-        'stat':'stat', \
-        'ddy':'ddy'}
+DATA_EXTENTIONS = {'SWERA': 'epw',
+                   'CSWD': 'epw',
+                   'CWEC': 'epw',
+                   'ETMY': 'epw',
+                   'IGDG': 'epw',
+                   'IMGW': 'epw',
+                   'INETI': 'epw',
+                   'ISHRAE': 'epw',
+                   'ITMY': 'epw',
+                   'IWEC': 'epw',
+                   'KISR': 'epw',
+                   'MSI': 'epw',
+                   'NIWA': 'epw',
+                   'RMY': 'epw',
+                   'SWEC': 'epw',
+                   'TMY': 'epw',
+                   'TMY2': 'epw',
+                   'TMY3': 'epw',
+                   'IWEC': 'epw',
+                   'stat': 'stat',
+                   'ddy': 'ddy'}
 
 try:
     os.listdir(WEATHER_DATA_PATH)
@@ -63,24 +63,27 @@ except OSError:
     except IOError:
         pass
 
+
 def _muck_w_date(record):
-    """muck with the date because EPW starts counting from 1 and goes to 24"""
-    temp_d = datetime.datetime(int(record['Year']), int(record['Month']), \
-            int(record['Day']), int(record['Hour'])%24, \
-            int(record['Minute'])%60) #minute 60 is actually minute 0?
-    d_off = int(record['Hour'])//24  #hour 24 is actually hour 0
+    """muck with the date because EPW starts counting from 1 and goes to 24."""
+    # minute 60 is actually minute 0?
+    temp_d = datetime.datetime(int(record['Year']), int(record['Month']),
+                               int(record['Day']), int(record['Hour']) % 24,
+                               int(record['Minute']) % 60)
+    d_off = int(record['Hour'])//24   # hour 24 is actually hour 0
     if d_off > 0:
         temp_d += datetime.timedelta(days=d_off)
-    #print d, '%s-%s-%s %s:%s' % (record['Year'], record['Month'], \
-    #record['Day'],record['Hour'],record['Minute'])
+    # print d, '%s-%s-%s %s:%s' % (record['Year'], record['Month'], \
+    # record['Day'],record['Hour'],record['Minute'])
     return temp_d
 
+
 def download(url):
-    """download and extract file"""
+    """download and extract file."""
     print("Downloading %s" % url)
     request = urllib2.Request(url)
-    request.add_header('User-Agent', \
-            'caelum/0.1 +https://github.com/nrcharles/caelum')
+    request.add_header('User-Agent',
+                       'caelum/0.1 +https://github.com/nrcharles/caelum')
     opener = urllib2.build_opener()
     with tempfile.TemporaryFile(suffix='.zip', dir=WEATHER_DATA_PATH) \
             as local_file:
@@ -89,28 +92,31 @@ def download(url):
         compressed_file.extractall(WEATHER_DATA_PATH)
         local_file.close()
 
+
 def _eere_url(station_code):
-    """build EERE EPW url for station code"""
+    """build EERE EPW url for station code."""
     baseurl = 'http://apps1.eere.energy.gov/buildings/energyplus/weatherdata/'
     return baseurl + _station_info(station_code)['url']
 
+
 def _station_info(station_code):
-    """filename based meta data for a station code"""
+    """filename based meta data for a station code."""
     url_file = open(SRC_PATH + '/eere.csv')
     for line in csv.DictReader(url_file):
         if line['station_code'] == station_code:
-            return  line
+            return line
     raise KeyError('Station not found')
 
 
 def _basename(station_code, fmt=None):
-    "region, country, weather_station, station_code, data_format, url"
+    "region, country, weather_station, station_code, data_format, url."
     info = _station_info(station_code)
     if not fmt:
         fmt = info['data_format']
-    basename = '%s.%s' % (info['url'].rsplit('/', 1)[1].rsplit('.', 1)[0], \
-            DATA_EXTENTIONS[fmt])
+    basename = '%s.%s' % (info['url'].rsplit('/', 1)[1].rsplit('.', 1)[0],
+                          DATA_EXTENTIONS[fmt])
     return basename
+
 
 def twopercent(station_code):
     """Two percent high design temperature for a location.
@@ -122,11 +128,11 @@ def twopercent(station_code):
     Returns:
         float degrees Celcius
     """
-    #(DB=>MWB) 2%, MaxDB=
+    # (DB=>MWB) 2%, MaxDB=
     temp = None
     try:
-        fin = open('%s/%s' % (WEATHER_DATA_PATH, \
-                _basename(station_code, 'ddy')))
+        fin = open('%s/%s' % (WEATHER_DATA_PATH,
+                              _basename(station_code, 'ddy')))
         for line in fin:
             value = re.search("""2%, MaxDB=(\\d+\\.\\d*)""", line)
             if value:
@@ -135,10 +141,10 @@ def twopercent(station_code):
         pass
 
     if not temp:
-        #(DB=>MWB) 2%, MaxDB=
+        # (DB=>MWB) 2%, MaxDB=
         try:
-            fin = open('%s/%s' % (WEATHER_DATA_PATH, \
-                    _basename(station_code, 'stat')))
+            fin = open('%s/%s' % (WEATHER_DATA_PATH,
+                                  _basename(station_code, 'stat')))
             flag = 0
             tdata = []
             for line in fin:
@@ -155,6 +161,7 @@ def twopercent(station_code):
     else:
         raise Exception("Error: 2% High Temperature not found")
 
+
 def minimum(station_code):
     """Extream Minimum Design Temperature for a location.
     Degrees in Celcius
@@ -168,21 +175,21 @@ def minimum(station_code):
     temp = None
     fin = None
     try:
-        fin = open('%s/%s' % (WEATHER_DATA_PATH, \
-                _basename(station_code, 'ddy')))
+        fin = open('%s/%s' % (WEATHER_DATA_PATH,
+                              _basename(station_code, 'ddy')))
     except IOError:
         print "File not found"
         download(_eere_url(station_code))
-        fin = open('%s/%s' % (WEATHER_DATA_PATH, \
-                _basename(station_code, 'ddy')))
+        fin = open('%s/%s' % (WEATHER_DATA_PATH,
+                              _basename(station_code, 'ddy')))
     for line in fin:
         value = re.search('Max Drybulb=(-?\\d+\\.\\d*)', line)
         if value:
             temp = float(value.groups()[0])
     if not temp:
         try:
-            fin = open('%s/%s' % (WEATHER_DATA_PATH, \
-                    _basename(station_code, 'stat')))
+            fin = open('%s/%s' % (WEATHER_DATA_PATH,
+                                  _basename(station_code, 'stat')))
             for line in fin:
                 if line.find('Minimum Dry Bulb') is not -1:
                     return float(line[37:-1].split('\xb0')[0])
@@ -193,8 +200,9 @@ def minimum(station_code):
     else:
         raise Exception("Error: Minimum Temperature not found")
 
+
 class EPWdata(object):
-    """EPW weather generator
+    """EPW weather generator.
 
     Attributes:
         lat (float): latitude in degrees
@@ -202,7 +210,7 @@ class EPWdata(object):
 
     """
     def __init__(self, station_code, DST=False):
-        """Data for a weather station
+        """Data for a weather station.
 
         Args:
             station_code (str): Station code of weather station
@@ -216,14 +224,16 @@ class EPWdata(object):
             print("File not found")
             download(_eere_url(station_code))
             self.csvfile = open(filename)
-        fieldnames = ["Year", "Month", "Day", "Hour", "Minute", "DS", \
-                "Dry-bulb (C)", "Dewpoint (C)", "Relative Humidity", \
-                "Pressure (Pa)", "ETR (W/m^2)", "ETRN (W/m^2)", "HIR (W/m^2)", \
-                "GHI (W/m^2)", "DNI (W/m^2)", "DHI (W/m^2)", "GHIL (lux)", \
-                "DNIL (lux)", "DFIL (lux)", "Zlum (Cd/m2)", "Wdir (degrees)", \
-                "Wspd (m/s)", "Ts cover", "O sky cover", "CeilHgt (m)", \
-                "Present Weather", "Pw codes", "Pwat (cm)", "AOD (unitless)", \
-                "Snow Depth (cm)", "Days since snowfall"]
+        fieldnames = ["Year", "Month", "Day", "Hour", "Minute", "DS",
+                      "Dry-bulb (C)", "Dewpoint (C)", "Relative Humidity",
+                      "Pressure (Pa)", "ETR (W/m^2)", "ETRN (W/m^2)",
+                      "HIR (W/m^2)", "GHI (W/m^2)", "DNI (W/m^2)",
+                      "DHI (W/m^2)", "GHIL (lux)", "DNIL (lux)", "DFIL (lux)",
+                      "Zlum (Cd/m2)", "Wdir (degrees)", "Wspd (m/s)",
+                      "Ts cover", "O sky cover", "CeilHgt (m)",
+                      "Present Weather", "Pw codes", "Pwat (cm)",
+                      "AOD (unitless)", "Snow Depth (cm)",
+                      "Days since snowfall"]
         station_meta = self.csvfile.readline().split(',')
         self.station_name = station_meta[1]
         self.CC = station_meta[3]
@@ -237,8 +247,8 @@ class EPWdata(object):
 
         if self.DST:
             geocoder = geocoders.GoogleV3()
-            self.local_tz = pytz.timezone(\
-                    geocoder.timezone((self.lat, self.lon)).zone)
+            self.local_tz = pytz.timezone(geocoder.timezone((self.lat,
+                                                             self.lon)).zone)
         dummy = ""
         for _ in range(7):
             dummy += self.csvfile.readline()
@@ -248,7 +258,7 @@ class EPWdata(object):
         return self
 
     def next(self):
-        """Weather data record
+        """Weather data record.
 
         Yields:
             dict
@@ -256,19 +266,19 @@ class EPWdata(object):
         record = self.epw_data.next()
         local_time = _muck_w_date(record)
         record['datetime'] = local_time
-        #does this fix a specific data set or a general issue?
+        # does this fix a specific data set or a general issue?
         if self.DST:
             localdt = self.local_tz.localize(record['datetime'])
             record['utc_datetime'] = localdt.astimezone(pytz.UTC)
         else:
-            record['utc_datetime'] = \
-                    local_time - datetime.timedelta(hours=self.TZ)
+            record['utc_datetime'] = local_time - \
+                datetime.timedelta(hours=self.TZ)
 
         return record
-        #'LOCATION,BEEK,-,NLD,IWEC Data,063800,50.92,5.78,1.0,116.0'
+        # 'LOCATION,BEEK,-,NLD,IWEC Data,063800,50.92,5.78,1.0,116.0'
 
     def __del__(self):
-        """clean up open files"""
+        """clean up open files."""
         self.csvfile.close()
 
 if __name__ == '__main__':
