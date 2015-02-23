@@ -2,6 +2,7 @@
 
 Example:
     Download latest to ~/gfs/[GFS TIMESTAMP]
+
     >>> gfs.download(datetime.datetime.now(),gfs.pgrb2)
 
 """
@@ -18,7 +19,7 @@ DATA_PATH = os.environ['HOME'] + "/gfs"
 
 
 def _verify_path(path):
-    """look for path and create it if doesn't exist"""
+    """look for path and create it if doesn't exist."""
     try:
         os.listdir(path)
     except OSError:
@@ -28,14 +29,14 @@ _verify_path(DATA_PATH)
 
 
 def baseurl(gfs_timestamp, filename):
-    """build url url"""
+    """build url."""
     url = 'http://nomads.ncep.noaa.gov/pub/data/nccf/com/gfs/prod/gfs.%s/'\
           '%s' % (gfs_timestamp, filename)
     return url
 
 
 def _join(segments):
-    """simply list by joining adjacent segments"""
+    """simply list by joining adjacent segments."""
     new = []
     start = segments[0][0]
     end = segments[0][1]
@@ -49,7 +50,7 @@ def _join(segments):
 
 
 def _filter_messages(messages, products=None, levels=None):
-    """filter messages for desired products and levels"""
+    """filter messages for desired products and levels."""
     if products is None:
         products = []
     if levels is None:
@@ -69,7 +70,7 @@ def _filter_messages(messages, products=None, levels=None):
 
 
 def _download_segments(filename, url, segments):
-    """download segments into a single file"""
+    """download segments into a single file."""
     gribfile = open(filename, 'w')
     for start, end in segments:
         req = urllib2.Request(url)
@@ -85,19 +86,19 @@ def _download_segments(filename, url, segments):
 
 
 def sflux(closest, offset):
-    """sflux dataset naming convention"""
+    """sflux dataset naming convention."""
     return 'gfs.t%02dz.sfluxgrbf%02d.grib2' % (closest, offset)
 
 
 def pgrb2(closest, offset):
-    """pgrb2 1 degree dataset naming convention"""
+    """pgrb2 1 degree dataset naming convention."""
     # gfs.t12z.pgrb2.1p00.f000
     return 'gfs.t%02dz.pgrb2.1p00.f%03d' % (closest, offset)
 
 
 def download(timestamp, dataset, path=None, products=None,
              levels=None, offset=0):
-    """saves GFS grib file to DATA_PATH
+    """save GFS grib file to DATA_PATH.
 
     Args:
         dataset(function): naming convention function.  eg. pgrb2
@@ -123,7 +124,8 @@ def download(timestamp, dataset, path=None, products=None,
 
 
 def message_index(index_url):
-    """get message index of components for urllib2
+    """get message index of components for urllib2.
+
     Args:
         url(string):
 
