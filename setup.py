@@ -1,4 +1,5 @@
 """install"""
+from __future__ import absolute_import
 import os
 from setuptools import setup, find_packages
 import datetime
@@ -22,7 +23,7 @@ setup(
     packages=find_packages(),
     long_description=read('README.rst'),
     install_requires=['geopy'],
-    package_data={'': ['*.csv','*.txt','*.rst']},
+    package_data={'': ['*.csv', '*.txt', '*.rst']},
     test_suite='tests.unit',
     classifiers=[
         "Development Status :: 4 - Beta",
