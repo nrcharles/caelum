@@ -1,13 +1,47 @@
 """Helper functions"""
-import os
 import math
+import env
 
-SRC_PATH = os.path.dirname(os.path.abspath(__file__))
+#SRC_PATH = os.path.dirname(os.path.abspath(__file__))
 
 SLON = {'W':-1.0,
         'E':1.0}
 SLAT = {'N':1.0,
         'S':-1.0}
+
+import urllib2
+import zipfile
+import tempfile
+import logging
+logger = logging.getLogger(__name__)
+
+def download(url, filename):
+    """download and extract file."""
+    logger.info("Downloading %s", url)
+    request = urllib2.Request(url)
+    request.add_header('User-Agent',
+                       'caelum/0.1 +https://github.com/nrcharles/caelum')
+    opener = urllib2.build_opener()
+    local_file = open(filename, 'w')
+    local_file.write(opener.open(request).read())
+    local_file.close()
+
+def download_extract(url):
+    """download and extract file."""
+    logger.info("Downloading %s", url)
+    request = urllib2.Request(url)
+    request.add_header('User-Agent',
+                       'caelum/0.1 +https://github.com/nrcharles/caelum')
+    opener = urllib2.build_opener()
+    with tempfile.TemporaryFile(suffix='.zip', dir=env.WEATHER_DATA_PATH) \
+            as local_file:
+        logger.debug('Saving to temporary file %s', local_file.name)
+        local_file.write(opener.open(request).read())
+        compressed_file = zipfile.ZipFile(local_file, 'r')
+        logger.debug('Extracting %s', compressed_file)
+        compressed_file.extractall(env.WEATHER_DATA_PATH)
+        local_file.close()
+
 
 def _mlat(tlat):
     nlat = SLAT[tlat[-1:]] * float(tlat[0:-2])/10.
@@ -35,7 +69,7 @@ def parse_noaa_line(line):
 
 def closest_noaa(latitude, longitude):
     """Find closest station code of a given station class"""
-    with open(SRC_PATH + '/inswo-stns.txt') as index:
+    with open(env.SRC_PATH + '/inswo-stns.txt') as index:
         index.readline() #header
         index.readline() #whitespace
         min_dist = 9999
@@ -47,8 +81,7 @@ def closest_noaa(latitude, longitude):
                 new_dist = math.sqrt(math.pow((float(i['LAT']) - latitude), 2) \
                         + math.pow((float(i['LON']) - longitude), 2))
             except:
-                print 'error'
-                print line
+                logger.error(line)
                 raise IOError('Inventory Issue')
 
             if new_dist < min_dist:
@@ -60,4 +93,4 @@ def closest_noaa(latitude, longitude):
     raise KeyError('station not found')
 
 if __name__ == '__main__':
-    print closest_noaa(52.208364, 5.320569)
+    print(closest_noaa(52.208364, 5.320569))

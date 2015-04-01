@@ -19,19 +19,17 @@ Examples:
 
 """
 
-import os
+from __future__ import absolute_import
+from __future__ import print_function
+import env
 import csv
-import zipfile
-import tempfile
 import datetime
 from geopy import geocoders
 import pytz
 import re
-
-import urllib2
-
-WEATHER_DATA_PATH = os.environ['HOME'] + "/weather_data"
-SRC_PATH = os.path.dirname(os.path.abspath(__file__))
+from tools import download_extract
+import logging
+logger = logging.getLogger(__name__)
 
 DATA_EXTENTIONS = {'SWERA': 'epw',
                    'CSWD': 'epw',
@@ -55,15 +53,6 @@ DATA_EXTENTIONS = {'SWERA': 'epw',
                    'stat': 'stat',
                    'ddy': 'ddy'}
 
-try:
-    os.listdir(WEATHER_DATA_PATH)
-except OSError:
-    try:
-        os.mkdir(WEATHER_DATA_PATH)
-    except IOError:
-        pass
-
-
 def _muck_w_date(record):
     """muck with the date because EPW starts counting from 1 and goes to 24."""
     # minute 60 is actually minute 0?
@@ -73,24 +62,7 @@ def _muck_w_date(record):
     d_off = int(record['Hour'])//24   # hour 24 is actually hour 0
     if d_off > 0:
         temp_d += datetime.timedelta(days=d_off)
-    # print d, '%s-%s-%s %s:%s' % (record['Year'], record['Month'], \
-    # record['Day'],record['Hour'],record['Minute'])
     return temp_d
-
-
-def download(url):
-    """download and extract file."""
-    print("Downloading %s" % url)
-    request = urllib2.Request(url)
-    request.add_header('User-Agent',
-                       'caelum/0.1 +https://github.com/nrcharles/caelum')
-    opener = urllib2.build_opener()
-    with tempfile.TemporaryFile(suffix='.zip', dir=WEATHER_DATA_PATH) \
-            as local_file:
-        local_file.write(opener.open(request).read())
-        compressed_file = zipfile.ZipFile(local_file, 'r')
-        compressed_file.extractall(WEATHER_DATA_PATH)
-        local_file.close()
 
 
 def _eere_url(station_code):
@@ -101,7 +73,7 @@ def _eere_url(station_code):
 
 def _station_info(station_code):
     """filename based meta data for a station code."""
-    url_file = open(SRC_PATH + '/eere.csv')
+    url_file = open(env.SRC_PATH + '/eere.csv')
     for line in csv.DictReader(url_file):
         if line['station_code'] == station_code:
             return line
@@ -109,7 +81,7 @@ def _station_info(station_code):
 
 
 def _basename(station_code, fmt=None):
-    "region, country, weather_station, station_code, data_format, url."
+    """region, country, weather_station, station_code, data_format, url."""
     info = _station_info(station_code)
     if not fmt:
         fmt = info['data_format']
@@ -120,6 +92,7 @@ def _basename(station_code, fmt=None):
 
 def twopercent(station_code):
     """Two percent high design temperature for a location.
+
     Degrees in Celcius
 
     Args:
@@ -131,7 +104,7 @@ def twopercent(station_code):
     # (DB=>MWB) 2%, MaxDB=
     temp = None
     try:
-        fin = open('%s/%s' % (WEATHER_DATA_PATH,
+        fin = open('%s/%s' % (env.WEATHER_DATA_PATH,
                               _basename(station_code, 'ddy')))
         for line in fin:
             value = re.search("""2%, MaxDB=(\\d+\\.\\d*)""", line)
@@ -143,7 +116,7 @@ def twopercent(station_code):
     if not temp:
         # (DB=>MWB) 2%, MaxDB=
         try:
-            fin = open('%s/%s' % (WEATHER_DATA_PATH,
+            fin = open('%s/%s' % (env.WEATHER_DATA_PATH,
                                   _basename(station_code, 'stat')))
             flag = 0
             tdata = []
@@ -163,7 +136,8 @@ def twopercent(station_code):
 
 
 def minimum(station_code):
-    """Extream Minimum Design Temperature for a location.
+    """Extreme Minimum Design Temperature for a location.
+
     Degrees in Celcius
 
     Args:
@@ -175,12 +149,12 @@ def minimum(station_code):
     temp = None
     fin = None
     try:
-        fin = open('%s/%s' % (WEATHER_DATA_PATH,
+        fin = open('%s/%s' % (env.WEATHER_DATA_PATH,
                               _basename(station_code, 'ddy')))
     except IOError:
-        print "File not found"
-        download(_eere_url(station_code))
-        fin = open('%s/%s' % (WEATHER_DATA_PATH,
+        logger.info("File not found")
+        download_extract(_eere_url(station_code))
+        fin = open('%s/%s' % (env.WEATHER_DATA_PATH,
                               _basename(station_code, 'ddy')))
     for line in fin:
         value = re.search('Max Drybulb=(-?\\d+\\.\\d*)', line)
@@ -188,7 +162,7 @@ def minimum(station_code):
             temp = float(value.groups()[0])
     if not temp:
         try:
-            fin = open('%s/%s' % (WEATHER_DATA_PATH,
+            fin = open('%s/%s' % (env.WEATHER_DATA_PATH,
                                   _basename(station_code, 'stat')))
             for line in fin:
                 if line.find('Minimum Dry Bulb') is not -1:
@@ -202,6 +176,7 @@ def minimum(station_code):
 
 
 class EPWdata(object):
+
     """EPW weather generator.
 
     Attributes:
@@ -209,6 +184,7 @@ class EPWdata(object):
         lon (float): lonitude in degrees
 
     """
+
     def __init__(self, station_code, DST=False):
         """Data for a weather station.
 
@@ -216,14 +192,15 @@ class EPWdata(object):
             station_code (str): Station code of weather station
             DST (bool): Weather timestands in daylight savings. Default False
         """
-        filename = WEATHER_DATA_PATH + '/' + _basename(station_code)
+        filename = env.WEATHER_DATA_PATH + '/' + _basename(station_code)
         self.csvfile = None
         try:
             self.csvfile = open(filename)
         except IOError:
-            print("File not found")
-            download(_eere_url(station_code))
+            logger.info("File not found")
+            download_extract(_eere_url(station_code))
             self.csvfile = open(filename)
+        logging.debug('opened %s', self.csvfile.name)
         fieldnames = ["Year", "Month", "Day", "Hour", "Minute", "DS",
                       "Dry-bulb (C)", "Dewpoint (C)", "Relative Humidity",
                       "Pressure (Pa)", "ETR (W/m^2)", "ETRN (W/m^2)",
@@ -282,5 +259,6 @@ class EPWdata(object):
         self.csvfile.close()
 
 if __name__ == '__main__':
+    logging.basicConfig(level=logging.DEBUG)
     import doctest
     doctest.testmod()

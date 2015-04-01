@@ -1,4 +1,4 @@
-"""TMY3 data set library: thin wrapper around csv files
+"""TMY3 data set library: thin wrapper around TMY csv files.
 
 Examples:
     >>> sum([int(i['GHI (W/m^2)']) for i in data('724666')])/365./1000.
@@ -15,12 +15,13 @@ import csv
 
 import datetime
 import os
+import env
+import logging
+logger = logging.getLogger(__name__)
+from tools import download
 
 # path to tmy3 data
 # default = ~/tmp3/
-TMY_PATH = os.environ['HOME'] + "/weather_data/"
-
-SRC_PATH = os.path.dirname(os.path.abspath(__file__))
 
 try:
     os.listdir(os.environ['HOME'] + '/tmy3')
@@ -40,29 +41,18 @@ def tmybasename(usaf):
     Returns:
         (str)
     """
-    url_file = open(SRC_PATH + '/tmy3.csv')
+    url_file = open(env.SRC_PATH + '/tmy3.csv')
     for line in url_file.readlines():
         if line.find(usaf) is not -1:
             return line.rstrip().partition(',')[0]
 
 
-def download_tmy(usaf):
-    """Download TMY3 file.
-
-    Args:
-        usaf (str): USAF code
-
-    Returns:
-        (None)
-    """
+def _tmy_url(usaf):
+    """tmy3 url."""
+    tmybase = tmybasename(usaf)
     url = "http://rredc.nrel.gov/solar/old_data/nsrdb/1991-2005/data/tmy3/"
     # url = "http://rredc.nrel.gov/solar/old_data/nsrdb/1991-2005/data/tmy3.20080820/"
-    import urllib2
-    tmybase = tmybasename(usaf)
-    tmydata = urllib2.urlopen(url + tmybase)
-    local_file = open(TMY_PATH + tmybase, 'w')
-    local_file.write(tmydata.read())
-    local_file.close()
+    return url + tmybase
 
 
 def strptime(string, timezone=0):
@@ -116,15 +106,15 @@ class data(object):
         Returns:
             (object)
         """
-        filename = TMY_PATH + usaf + 'TYA.csv'
+        filename = env.WEATHER_DATA_PATH + '/' + usaf + 'TYA.csv'
         self.csvfile = None
         try:
             self.csvfile = open(filename)
         except IOError:
-            print "File not found"
-            print "Downloading ..."
-            download_tmy(usaf)
+            logger.info("%s not found", filename)
+            download(_tmy_url(usaf), filename)
             self.csvfile = open(filename)
+        logging.debug('opened %s', self.csvfile.name)
         header = self.csvfile.readline().split(',')
         self.tmy_data = csv.DictReader(self.csvfile)
         self.latitude = float(header[4])
@@ -132,6 +122,7 @@ class data(object):
         self.tz = float(header[3])
 
     def __iter__(self):
+        """iterate."""
         return self
 
     def next(self):
@@ -143,6 +134,7 @@ class data(object):
         return record
 
     def __del__(self):
+        """del."""
         self.csvfile.close()
 
 
@@ -155,5 +147,6 @@ def total(usaf, field='GHI (W/m^2)'):
     return running_total/1000.
 
 if __name__ == "__main__":
+    logging.basicConfig(level=logging.DEBUG)
     import doctest
     doctest.testmod()
