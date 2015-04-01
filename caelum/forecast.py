@@ -1,4 +1,4 @@
-"""Forecast IO API"""
+"""Forecast IO API."""
 import json
 import urllib2
 import os
@@ -9,19 +9,22 @@ if not APIKEY:
     print "WARNING: forecast.io key not set."
     print "Realtime weather data not availible."
 
+
 def data(place):
-    """get forecast data"""
+    """get forecast data."""
     lat, lon = place
-    url = "https://api.forecast.io/forecast/%s/%s,%s?solar" % (APIKEY, lat, lon)
+    url = "https://api.forecast.io/forecast/%s/%s,%s?solar" % (APIKEY, lat,
+                                                               lon)
     w_data = json.loads(urllib2.urlopen(url).read())
     return w_data
 
+
 def mangle(data_point):
-    """mangle data into expected format"""
+    """mangle data into expected format."""
     temp_dict = {}
     temp_dict.update(data_point)
     temp_dict['utc_datetime'] = \
-            datetime.datetime.utcfromtimestamp(temp_dict['time'])
+        datetime.datetime.utcfromtimestamp(temp_dict['time'])
     if 'solar' in data_point:
         temp_dict['GHI (W/m^2)'] = data_point['solar']['ghi']
         temp_dict['DNI (W/m^2)'] = data_point['solar']['dni']
@@ -35,12 +38,15 @@ def mangle(data_point):
         temp_dict['ETR (W/m^2)'] = 0.0
     return temp_dict
 
-#these functions should probably be class methods
+# these functions should probably be class methods
+
+
 def hourly(place):
-    """return data as list of dicts with all data filled in"""
-    #time in utc?
+    """return data as list of dicts with all data filled in."""
+    # time in utc?
     lat, lon = place
-    url = "https://api.forecast.io/forecast/%s/%s,%s?solar" % (APIKEY, lat, lon)
+    url = "https://api.forecast.io/forecast/%s/%s,%s?solar" % (APIKEY, lat,
+                                                               lon)
     w_data = json.loads(urllib2.urlopen(url).read())
     hourly_data = w_data['hourly']['data']
     mangled = []
@@ -48,10 +54,12 @@ def hourly(place):
         mangled.append(mangle(i))
     return mangled
 
+
 def current(place):
-    """return data as list of dicts with all data filled in"""
+    """return data as list of dicts with all data filled in."""
     lat, lon = place
-    url = "https://api.forecast.io/forecast/%s/%s,%s?solar" % (APIKEY, lat, lon)
+    url = "https://api.forecast.io/forecast/%s/%s,%s?solar" % (APIKEY, lat,
+                                                               lon)
     w_data = json.loads(urllib2.urlopen(url).read())
     currently = w_data['currently']
     return mangle(currently)
