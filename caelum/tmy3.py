@@ -15,10 +15,10 @@ import csv
 
 import datetime
 import os
-import env
 import logging
 logger = logging.getLogger(__name__)
-from tools import download
+from .tools import download
+from . import env
 
 # path to tmy3 data
 # default = ~/tmp3/

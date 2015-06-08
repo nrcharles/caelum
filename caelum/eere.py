@@ -21,13 +21,13 @@ Examples:
 
 from __future__ import absolute_import
 from __future__ import print_function
-import env
 import csv
 import datetime
-from geopy import geocoders
 import pytz
 import re
-from tools import download_extract
+from geopy import geocoders
+from .tools import download_extract
+from . import env
 import logging
 logger = logging.getLogger(__name__)
 
@@ -52,6 +52,7 @@ DATA_EXTENTIONS = {'SWERA': 'epw',
                    'IWEC': 'epw',
                    'stat': 'stat',
                    'ddy': 'ddy'}
+
 
 def _muck_w_date(record):
     """muck with the date because EPW starts counting from 1 and goes to 24."""
@@ -232,6 +233,7 @@ class EPWdata(object):
         self.epw_data = csv.DictReader(self.csvfile, fieldnames=fieldnames)
 
     def __iter__(self):
+        """iterate."""
         return self
 
     def next(self):
