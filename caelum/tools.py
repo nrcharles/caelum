@@ -117,7 +117,7 @@ def closest_eere(latitude, longitude):
         tuple (station_code (str), station_name (str))
 
     """
-    with open('./eere_meta.csv') as eere_meta:
+    with open(env.SRC_PATH + '/eere_meta.csv') as eere_meta:
         stations = csv.DictReader(eere_meta)
         d = 9999
         station_code = ''
@@ -142,7 +142,7 @@ def eere_station(station_code):
 
     Returns (dict): station information
     """
-    with open('./eere_meta.csv') as eere_meta:
+    with open(env.SRC_PATH + '/eere_meta.csv') as eere_meta:
         stations = csv.DictReader(eere_meta)
         for station in stations:
             if station['station_code'] == station_code:
